@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="37f7ccb7-dee8-412e-b8b9-a9841d133101" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="azom-website" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hpCwZFOZAHnjutovJiYgYgQxv5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37f7ccb7-dee8-412e-b8b9-a9841d133101" name="Default Changelist" comment="" />
+      <created>1600698886108</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600698886108</updated>
+      <workItem from="1600698889233" duration="3195000" />
+      <workItem from="1600752421184" duration="26286000" />
+      <workItem from="1600835087701" duration="6327000" />
+      <workItem from="1600866855533" duration="32734000" />
+      <workItem from="1601026060164" duration="7460000" />
+      <workItem from="1601117986663" duration="2543000" />
+      <workItem from="1601140169832" duration="3343000" />
+      <workItem from="1601190570524" duration="4211000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2084" y="218" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1600791265962">
+      <screen x="1366" y="-174" width="1920" height="1040" />
+    </state>
+    <state x="2084" y="218" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728/1366.-174.1920.1040@1366.-174.1920.1040" timestamp="1600791265962" />
+    <state x="1458" y="-82" width="1685" height="856" key="DiffContextDialog" timestamp="1600790862055">
+      <screen x="1366" y="-174" width="1920" height="1040" />
+    </state>
+    <state x="1458" y="-82" width="1685" height="856" key="DiffContextDialog/0.0.1366.728/1366.-174.1920.1040@1366.-174.1920.1040" timestamp="1600790862055" />
+    <state x="2106" y="102" key="FileChooserDialogImpl" timestamp="1600706054981">
+      <screen x="1366" y="-174" width="1920" height="1040" />
+    </state>
+    <state x="2106" y="102" key="FileChooserDialogImpl/0.0.1366.728/1366.-174.1920.1040@1366.-174.1920.1040" timestamp="1600706054981" />
+    <state x="1827" y="-11" key="SettingsEditor" timestamp="1600791110010">
+      <screen x="1366" y="-174" width="1920" height="1040" />
+    </state>
+    <state x="1827" y="-11" key="SettingsEditor/0.0.1366.728/1366.-174.1920.1040@1366.-174.1920.1040" timestamp="1600791110010" />
+    <state x="1982" y="153" key="run.anything.popup" timestamp="1600772285856">
+      <screen x="1366" y="-174" width="1920" height="1040" />
+    </state>
+    <state x="1982" y="153" key="run.anything.popup/0.0.1366.728/1366.-174.1920.1040@1366.-174.1920.1040" timestamp="1600772285856" />
+  </component>
+</project>
