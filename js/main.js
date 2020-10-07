@@ -39,19 +39,43 @@ $(document).ready(function () {
 
         socialBox.height(divWidth - 10);
         $(window).on("resize", function () {
+            let divWidth = socialBox.width();
             socialBox.height(divWidth - 10);
             console.log("hamza")
         });
     }
 
+    // let mobile_img = $(".desert-hero-image-container img");
+    // if (mobile_img.length) {
+    //     let divHeight = mobile_img.height();
+    //     let pb = divHeight / 2;
+    //     $(".desert-container").css("paddingBottom", pb + 50);
+    //
+    //     $(window).on("resize", function () {
+    //         let divHeight = mobile_img.height();
+    //         let pb = divHeight / 2;
+    //         $(".desert-container").css("paddingBottom", pb + 50);
+    //     });
+    // }
 //   Gsap start
     gsap.registerPlugin(ScrollTrigger);
     const t1 = gsap.timeline();
     var arr1 = [0, 0, 100, 0, 100, 0, 0, 0];
-    t1.to('.clep-scroll', {
-        webkitClipPath: 'polygon(' + arr1[0] + '%' + arr1[1] + '%,' + arr1[2] + '%' + arr1[3] + '%,' + arr1[4] + '%' + arr1[5] + '%,' + arr1[6] + '%' + arr1[7] + '%)',
-        duration: 2,
-    });
+    if ($(".clep-scroll").length) {
+        t1.to('.clep-scroll', {
+            webkitClipPath: 'polygon(' + arr1[0] + '%' + arr1[1] + '%,' + arr1[2] + '%' + arr1[3] + '%,' + arr1[4] + '%' + arr1[5] + '%,' + arr1[6] + '%' + arr1[7] + '%)',
+            duration: 2,
+        });
+        ScrollTrigger.create({
+            animation: t1,
+            trigger: ".clep-container",
+            start: "top",
+            end: "100%",
+            scrub: 1,
+            pin: true
+        });
+    }
+
     // gsap.to(".clep-scroll", {
     //     webkitClipPath: 'polygon(' + arr1[0] + '%' + arr1[1] + '%,' + arr1[2] + '%' + arr1[3] + '%,' + arr1[4] + '%' + arr1[5] + '%,' + arr1[6] + '%' + arr1[7] + '%)',
     //     duration: 2,
@@ -78,14 +102,4 @@ $(document).ready(function () {
     //         // toggleActions: "play none none reverse",
     //     }
     // });
-    ScrollTrigger.create({
-        animation: t1,
-        trigger: ".clep-container",
-        start:"top",
-        end: "100%",
-        scrub: 1,
-        pin: true
-    });
-
-
 });
