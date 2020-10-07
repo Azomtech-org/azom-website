@@ -1197,7 +1197,10 @@ footer{
 }
 .pixel-size{
   position: absolute;
-  top: -25px;
+  top: -35px;
+  @include media-breakpoint-down(lg){
+    top: -25px;
+  }
   color: $white;
   ul{
     li{
