@@ -311,7 +311,12 @@ border-width: 2px;
     font-size: 26px;
   }
 }
-
+@include media-breakpoint-up(lg){
+  .col-lg-20{
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
 .paragraph {
   font-size: 20px;
 }
@@ -342,11 +347,11 @@ border-width: 2px;
 }
 
 .section-p {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 70px;
+  padding-bottom: 70px;
   @include media-breakpoint-down(md) {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 .section-p-t{
@@ -987,7 +992,7 @@ footer{
   }
   p{
     font-size: 25px;
-    padding-left: 30px;
+    padding-left: 60px;
     margin-top: 15px;
     @include media-breakpoint-down(md){
       font-size: 20px;
@@ -1007,6 +1012,24 @@ footer{
   padding-bottom: 400px;
   @include media-breakpoint-down(lg){
     padding-bottom: 515px;
+  }
+}
+.hero-buds-container{
+  padding-bottom: 250px;
+  @include media-breakpoint-down(lg){
+    padding-bottom: 330px;
+  }
+  @include media-breakpoint-down(md){
+    padding-bottom: 100px;
+  }
+  .desert-hero-image-container .desert-hero-image img{
+    max-width: 100vh;
+  }
+  .desert-hero-image-container{
+    transform: translateY(-62%);
+    @include media-breakpoint-down(md){
+      transform: translateY(-111%);
+    }
   }
 }
 .mobile-details-section{
@@ -1357,4 +1380,79 @@ footer{
 }
 .box1-img{
   margin-top: -30px;
+}
+.border{
+  border-color: $black-color !important;
+}
+.phone-info-box{
+  margin-bottom: 40px;
+  text-align: center;
+  img{
+    height: 50px;
+  }
+  p{
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    @include media-breakpoint-down(sm){
+      font-size: 18px;
+    }
+  }
+}
+.phone-details-section{
+  .row{
+    .col-lg-20{
+      margin-bottom: 30px;
+      &:nth-child(2), &:nth-child(3), &:nth-child(5), &:nth-child(6), &:nth-child(8){
+        .phone-details-box{
+          border: 2px solid $black-color;
+        }
+      }
+    }
+  }
+  .phone-details-box{
+    padding: 30px 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    h3{
+      font-size: 44px;
+      position: relative;
+      font-weight: 500;
+      display: inline-block;
+      margin-bottom: 5px;
+      @include media-breakpoint-down(lg){
+        font-size: 33px;
+      }
+      @include media-breakpoint-down(sm){
+        font-size: 27px;
+      }
+      span{
+        position: absolute;
+        top: 20px;
+        transform: translateY(-50%);
+        left: calc(100% + 10px);
+        font-size: 15px;
+        font-weight: 400;
+        @include media-breakpoint-down(sm){
+          left: calc(100% + 5px);
+          font-size: 13px;
+          top: 13px;
+        }
+      }
+    }
+    p{
+      font-size: 25px;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 0;
+      @include media-breakpoint-down(lg){
+        font-size: 22px;
+      }
+      @include media-breakpoint-down(sm){
+        font-size: 20px;
+      }
+    }
+  }
 }
