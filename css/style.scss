@@ -10,6 +10,7 @@ $yellow-color: #FEC25F;
 $blue-color: #004980;
 $gray-bg: #EEE;
 $gray-text-color:#898888;
+$eee-color: #EEEEEE;
 
 $gotham: gotham, "sans-serif";
 $d-din: D-DIN, "sans-serif";
@@ -106,8 +107,9 @@ $letter-spacing: 1px;
 }
 .lg-btn{
   font-size: 35px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  cursor: pointer;
   @include media-breakpoint-down(md){
     font-size: 25px;
     padding-top: 25px;
@@ -1454,5 +1456,103 @@ footer{
         font-size: 20px;
       }
     }
+  }
+}
+.page-container{
+  padding-top: 150px;
+}
+.buy-section{
+  h3{
+    font-size: 35px;
+    font-weight: 700;
+    @include media-breakpoint-down(lg){
+      margin-top: 40px;
+    }
+  }
+  p{
+    font-size: 20px;
+  }
+}
+.chick-1{
+  margin-top: 25px;
+  .custom-control{
+    &:first-child{
+      margin-bottom: 15px;
+    }
+    padding-left: 0;
+    label{
+      display: block;
+      border: 1px solid $black-color;
+      padding: 25px 50px;
+      font-size: 23px;
+      font-weight: 700;
+      cursor: pointer;
+
+    }
+    .custom-control-label::before{
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 3px solid $black-color;
+      width: 20px;
+      height: 20px;
+    }
+    .custom-control-label::after{
+      left: 20px;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      transform: translateY(-50%);
+    }
+    .custom-control-input:checked~.custom-control-label::before{
+      background: transparent;
+      border-color: $white;
+    }
+    .custom-control-input:checked~.custom-control-label{
+      background-color: $black-color;
+      color: $white;
+    }
+    .custom-control-input:not(:disabled):active~.custom-control-label::before{
+      background: transparent;
+    }
+  }
+}
+.custom-control-input:focus~.custom-control-label::before{
+  box-shadow: none;
+}
+.buy-img{
+  img{
+    opacity: 0.32;
+    transition: all ease-in-out 0.3s;
+  }
+  &.active{
+    img{
+      opacity: 1;
+    }
+  }
+}
+.l-more{
+  color: $black-color;
+  text-decoration: underline;
+  &:hover{
+    text-decoration: underline;
+    color: $yellow-color;
+  }
+}
+.card-1{
+  background-color:$eee-color ;
+  p{
+    margin: 0;
+  }
+  h3{
+    margin: 0;
+    font-weight: 900;
+    font-size: 30px;
+  }
+  padding: 20px 30px;
+}
+.chick-out-btn-1{
+  @include media-breakpoint-down(lg){
+    padding: 35px;
   }
 }

@@ -32,7 +32,37 @@ $(document).ready(function () {
         }
     });
 
+    if($(".mobile-check").length){
+        function check_if_mobile_checked() {
+            if ($("#blackPhone").is(':checked')){
+                $(".black-buy-phone").addClass("active");
+                $(".white-buy-phone").removeClass("active");
+            }else if ($("#whitePhone").is(':checked')){
+                $(".white-buy-phone").addClass("active");
+                $(".black-buy-phone").removeClass("active");
+            }
+        }
+        check_if_mobile_checked();
+        $(".mobile-check input").on("change",function () {
+            check_if_mobile_checked();
+        });
+    }
 
+    if($(".buds-check").length){
+        function check_if_buds_checked() {
+            if ($("#blackBuds").is(':checked')){
+                $(".black-buy-buds").addClass("active");
+                $(".white-buy-buds").removeClass("active");
+            }else if ($("#whiteBuds").is(':checked')){
+                $(".white-buy-buds").addClass("active");
+                $(".black-buy-buds").removeClass("active");
+            }
+        }
+        check_if_buds_checked();
+        $(".buds-check input").on("change",function () {
+            check_if_buds_checked();
+        });
+    }
     let socialBox = $('.our-social a');
     if (socialBox.length) {
         let divWidth = socialBox.width();
