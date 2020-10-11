@@ -1628,7 +1628,63 @@ footer{
   @include media-breakpoint-down(lg){
     font-size: 18px;
   }
-  //@include media-breakpoint-down(lg){
-  //  font-size: 23px;
-  //}
+}
+.accordion1{
+  .card{
+    border: 0;
+    border-radius: 0;
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+    .card-header{
+      border-radius: 0 !important;
+      border-bottom: 0;
+      padding: 0;
+      button{
+        width: 100%;
+        text-align: left;
+        display: block;
+        padding: 20px 40px;
+        padding-right: 45px;
+        color: $black-color;
+        font-weight: 700;
+        font-size: 23px;
+        text-decoration: none !important;
+        position: relative;
+        @include media-breakpoint-down(lg){
+          font-size: 20px;
+        }
+        @include media-breakpoint-down(md){
+          font-size: 19px;
+        }
+        @include media-breakpoint-down(sm){
+          font-size: 17px;
+          padding: 20px 25px;
+          padding-right: 60px;
+        }
+        img{
+          position: absolute;
+          right: 40px;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 14px;
+          width: auto;
+          @include media-breakpoint-down(sm){
+            right: 25px;
+            height: 10px;
+          }
+        }
+        &:hover{
+          text-decoration: none;
+        }
+      }
+
+    }
+    .card-body{
+      padding: 20px 40px;
+      @include media-breakpoint-down(sm) {
+        padding: 20px 25px;
+      }
+    }
+  }
 }
