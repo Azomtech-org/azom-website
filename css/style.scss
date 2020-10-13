@@ -1,5 +1,7 @@
 @import "bootstrap.min.css";
 @import "plyr.css";
+@import "daterangepicker.css";
+@import "bootstrap-select.min.css";
 @import "scss/_functions.scss";
 @import "scss/_variables.scss";
 @import "scss/mixins/_breakpoints.scss";
@@ -1686,5 +1688,122 @@ footer{
         padding: 20px 25px;
       }
     }
+  }
+}
+.link{
+  color: $black-color;
+  &:hover{
+    color: $yellow-color;
+  }
+}
+.form{
+  label{
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    @include media-breakpoint-down(sm){
+      font-size: 20px;
+    }
+  }
+  input,.bootstrap-select>.dropdown-toggle{
+    border: 0;
+    background-color: $eee-color;
+    padding: 15px 20px;
+    display: block;
+    width: 100%;
+    font-size: 26px;
+    font-weight: 900;
+    outline: none !important;
+    border-radius: 0;
+    @include media-breakpoint-down(sm){
+      font-size: 18px;
+    }
+    &::placeholder,{
+      color: rgba($black-color, 0.15);
+      font-weight: 700;
+    }
+
+  }
+}
+.bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover{
+  color: rgba($black-color, 0.15);
+  font-weight: 700;
+}
+.input-container{
+  margin-bottom: 30px;
+}
+.daterangepicker td.active, .daterangepicker td.active:hover{
+  background-color: $black-color;
+}
+.daterangepicker td.start-date.end-date,
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td,
+.dropdown-item:last-child,
+.dropdown-menu{
+  border-radius: 0;
+}
+.dropdown-toggle::after,.dropup .dropdown-toggle::after{
+  display: none;
+}
+.btn:focus{
+  box-shadow: none !important;
+}
+.daterangepicker td.start-date.end-date, .daterangepicker .calendar-table th, .daterangepicker .calendar-table td, .dropdown-item:last-child, .dropdown-menu{
+  outline: none !important;
+}
+.dropdown-item.active, .dropdown-item:active{
+  background-color: $black-color;
+}
+.bootstrap-select .dropdown-menu li a{
+  font-size: 20px;
+  @include media-breakpoint-down(sm){
+    font-size: 18px;
+  }
+}
+.date-container,.bs-container{
+  position: relative;
+  img{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    height: 18px;
+    z-index: 10;
+    pointer-events: none;
+  }
+}
+.bs-container{
+  img{
+    height: 12px;
+    margin-right: 2px;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.pass-container{
+  position: relative;
+  .show-pass-label{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 10;
+    border: 0;
+    cursor: pointer;
+    outline: none !important;
+    img{
+      height: 20px;
+    }
+  }
+  .show-pass{
+    display: none;
   }
 }

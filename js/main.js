@@ -31,6 +31,75 @@ $(document).ready(function () {
             // $("body").removeClass("headerIsFixed")
         }
     });
+    if($("#date").length){
+        $('#date').daterangepicker({
+            "autoUpdateInput": false,
+            "singleDatePicker": true,
+            "showDropdowns": true,
+            "minYear": 1940,
+            "maxYear": 2020,
+            "autoApply": true,
+            "linkedCalendars": false,
+            "showCustomRangeLabel": false,
+            "startDate": "02/25/1990",
+            "endDate": "10/12/2020"
+        });
+        $('#date').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('DD/MM/YYYY'));
+        });
+    }
+    //show pass
+    // let showPassButton = $(".show-pass");
+    // showPassButton.on("change",function () {
+    //     let passInput = $(this).parent().find("input[type = password]");
+    //     let check = $(this).parent().find("input[type = checkbox]");
+    //     // let type = passInput.attr("type");
+    //     if (check.is(':checked')) {
+    //         passInput.type = 'text'
+    //     } else {
+    //         passInput.type = 'password'
+    //     }
+    //     console.log(passInput.attr("type"))
+    // });
+
+    //show hide password
+    document.addEventListener('click', function (event) {
+
+        // If the clicked element isn't our show password checkbox, bail
+        if (event.target.id !== 'show_pass') return;
+
+        // Get the password field
+        var password = document.querySelector('#password');
+        if (!password) return;
+
+        // Check if the password should be shown or hidden
+        if (event.target.checked) {
+            // Show the password
+            password.type = 'text';
+        } else {
+            // Hide the password
+            password.type = 'password';
+        }
+
+    }, false);
+    document.addEventListener('click', function (event) {
+
+        // If the clicked element isn't our show password checkbox, bail
+        if (event.target.id !== 'show_pass2') return;
+
+        // Get the password field
+        var password = document.querySelector('#c_password');
+        if (!password) return;
+
+        // Check if the password should be shown or hidden
+        if (event.target.checked) {
+            // Show the password
+            password.type = 'text';
+        } else {
+            // Hide the password
+            password.type = 'password';
+        }
+    }, false);
 
     if($(".mobile-check").length){
         function check_if_mobile_checked() {
