@@ -1732,6 +1732,9 @@ footer{
 }
 .input-container{
   margin-bottom: 30px;
+  @include media-breakpoint-down(sm){
+    margin-bottom: 20px;
+  }
 }
 .daterangepicker td.active, .daterangepicker td.active:hover{
   background-color: $black-color;
