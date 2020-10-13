@@ -1732,8 +1732,18 @@ footer{
 }
 .input-container{
   margin-bottom: 30px;
+  position: relative;
   @include media-breakpoint-down(sm){
     margin-bottom: 20px;
+  }
+  .parsley-errors-list{
+    list-style: none;
+    padding-left: 0;
+    position: absolute;
+    bottom: -20px;
+    color: #EB402E;
+    font-size: 14px;
+    margin: 0;
   }
 }
 .daterangepicker td.active, .daterangepicker td.active:hover{
@@ -1809,4 +1819,64 @@ input[type=number] {
   .show-pass{
     display: none;
   }
+}
+.custom-file{
+  height: 69px;
+  @include media-breakpoint-down(sm){
+    height: 57px;
+  }
+  cursor: pointer;
+  .custom-file-input{
+    height: 69px;
+    @include media-breakpoint-down(sm){
+      height: 57px;
+    }
+    border-radius: 0;
+    border-color: transparent;
+    cursor: pointer;
+    outline: none !important;
+    &:focus, &:active, &:visited{
+      outline: none !important;
+    }
+  }
+  .custom-file-label{
+    height: 69px;
+    border-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 0;
+    background-color: $eee-color;
+    cursor: pointer;
+    outline: none !important;
+    color: rgba($black-color, 0.15);
+    font-weight: 700;
+    overflow: hidden;
+    @include media-breakpoint-down(sm){
+      height: 57px;
+    }
+    &.file-has-change{
+      font-weight: 900;
+      color: $black-color;
+      @include media-breakpoint-down(sm){
+        font-size: 18px;
+      }
+    }
+    &:focus, &:active, &:visited{
+      outline: none !important;
+    }
+  }
+}
+.custom-file-input:focus~.custom-file-label {
+  border-color: transparent;
+  box-shadow: none;
+}
+.custom-file-label::after{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: $black-color;
+  color: $white;
+  cursor: pointer;
+  border-radius: 0;
 }

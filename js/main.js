@@ -48,6 +48,36 @@ $(document).ready(function () {
             $(this).val(picker.startDate.format('DD/MM/YYYY'));
         });
     }
+    if($("#Purchase_Date").length){
+        $('#Purchase_Date').daterangepicker({
+            "autoUpdateInput": false,
+            "singleDatePicker": true,
+            "showDropdowns": true,
+            "minYear": 1940,
+            "maxYear": 2020,
+            "autoApply": true,
+            "linkedCalendars": false,
+            "showCustomRangeLabel": false,
+        });
+        $('#Purchase_Date').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('DD/MM/YYYY'));
+        });
+    }
+    if($("#customFile").length){
+    $('#customFile').on('change',function(){
+        //get the file name
+        var fileName = $(this).val();
+        var label = $(this).next('.custom-file-label');
+        //replace the "Choose a file" label
+        label.html(fileName);
+        label.addClass("file-has-change")
+    })
+    }
+    if($(".on-change").length) {
+        $(".on-change").parsley({
+            triggerAfterFailure: 'input changed.bs.select apply.daterangepicker'
+        });
+    }
     //show pass
     // let showPassButton = $(".show-pass");
     // showPassButton.on("change",function () {
