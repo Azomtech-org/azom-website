@@ -772,6 +772,11 @@ header {
     }
   }
 }
+.care-section{
+  .lg-btn{
+    text-transform: uppercase;
+  }
+}
 
 .care-section-content {
   h2 {
@@ -791,9 +796,17 @@ header {
   }
 
   margin-bottom: 30px;
+
 }
 
 .care-card {
+  &.vip-card{
+    background-color: $black-color;
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
   @include media-breakpoint-down(lg) {
     margin-bottom: 30px;
   }
@@ -804,8 +817,8 @@ header {
   transition: all ease-in-out 0.3s;
 
   &:hover {
-    color: $white;
-    background: $black-color;
+    color: $black-color;
+    //background: $black-color;
   }
 
   p {
@@ -1886,6 +1899,20 @@ input[type=number] {
     font-size: 38px;
     @include media-breakpoint-down(sm){
       font-size: 25px;
+    }
+  }
+}
+.quota-list{
+  margin-top: 30px;
+  li:not(:last-child){
+    margin-bottom: 15px;
+  }
+  li{
+    padding-left: 10px;
+    &.not-supported{
+      span{
+        text-decoration:line-through ;
+      }
     }
   }
 }
