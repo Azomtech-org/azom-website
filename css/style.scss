@@ -1,6 +1,7 @@
 @import "bootstrap.min.css";
 @import "plyr.css";
 @import "daterangepicker.css";
+@import "sweetalert2.min.css";
 @import "bootstrap-select.min.css";
 @import "scss/_functions.scss";
 @import "scss/_variables.scss";
@@ -13,6 +14,10 @@ $blue-color: #004980;
 $gray-bg: #EEE;
 $gray-text-color:#898888;
 $eee-color: #EEEEEE;
+$red-color: #EB402E;
+$f5-color:#f5f5f5;
+$border-color:#707070;
+$light-black:#5B5B5B;
 
 $gotham: gotham, "sans-serif";
 $d-din: D-DIN, "sans-serif";
@@ -112,10 +117,10 @@ $letter-spacing: 1px;
   padding-top: 35px;
   padding-bottom: 35px;
   cursor: pointer;
-  @include media-breakpoint-down(md){
+  @include media-breakpoint-down(sm){
     font-size: 25px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 %my-outluine-btn {
@@ -374,6 +379,7 @@ body {
   font-family: $gotham;
   font-weight: 400;
   color: $black-color;
+  background-color: $f5-color;
 
   &.headerIsFixed {
     padding-top: 91px;
@@ -811,7 +817,6 @@ header {
     margin-bottom: 30px;
   }
   padding: 20px;
-  border: 2px solid $black-color;
   color: $black-color;
   background: #fff;
   transition: all ease-in-out 0.3s;
@@ -1475,6 +1480,7 @@ footer{
 }
 .page-container{
   padding-top: 150px;
+  background-color: $f5-color;
 }
 .buy-section{
   h3{
@@ -1555,16 +1561,64 @@ footer{
   }
 }
 .card-1{
-  background-color:$eee-color ;
+  border:1px solid $border-color;
   p{
     margin: 0;
+    color: $light-black;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 20px;
+    @include media-breakpoint-down(sm){
+      font-size: 17px;
+    }
   }
   h3{
     margin: 0;
     font-weight: 900;
     font-size: 30px;
+    color: $light-black;
+    @include media-breakpoint-down(sm){
+      font-size: 22px;
+    }
   }
   padding: 20px 30px;
+  @include media-breakpoint-down(sm){
+    padding: 15px 20px;
+  }
+}
+.card-2{
+  background-color: $white;
+  p{
+    margin: 0;
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: uppercase;
+    @include media-breakpoint-down(sm){
+      font-size: 17px;
+    }
+  }
+  h3{
+    margin: 0;
+    font-weight: 900;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(sm){
+      font-size: 22px;
+    }
+    span{
+      font-weight: 400;
+      font-size: 16px;
+      padding: 0 5px;
+      @include media-breakpoint-down(sm){
+        font-size: 14px;
+      }
+    }
+  }
+  padding: 20px 30px;
+  @include media-breakpoint-down(sm){
+    padding: 15px 20px;
+  }
 }
 .chick-out-btn-1{
   @include media-breakpoint-down(lg){
@@ -1644,10 +1698,18 @@ footer{
     font-size: 18px;
   }
 }
+.title3{
+  font-weight: 700;
+  font-size: 33px;
+  @include media-breakpoint-down(lg){
+    font-size: 25px;
+  }
+}
 .accordion1{
   .card{
     border: 0;
     border-radius: 0;
+    background-color: transparent;
     &:not(:last-child){
       margin-bottom: 20px;
     }
@@ -1655,6 +1717,7 @@ footer{
       border-radius: 0 !important;
       border-bottom: 0;
       padding: 0;
+      background-color: $white;
       button{
         width: 100%;
         text-align: left;
@@ -1696,6 +1759,7 @@ footer{
 
     }
     .card-body{
+      background-color: transparent;
       padding: 20px 40px;
       @include media-breakpoint-down(sm) {
         padding: 20px 25px;
@@ -1914,5 +1978,223 @@ input[type=number] {
         text-decoration:line-through ;
       }
     }
+  }
+}
+.cart-table{
+  table{
+    border-collapse:separate;
+    border-spacing:0 15px;
+    tr{
+      th{
+        border: 0;
+        font-weight: 400;
+        &:first-child{
+          padding-left: 50px;
+        }
+      }
+      td{
+        border: 0;
+        white-space: nowrap;
+        vertical-align: middle;
+        //padding-top: 1.2rem;
+        padding: 1.2rem;
+        background-color: $white;
+        font-weight: 700;
+        &:first-child{
+          padding-left: 50px;
+          position: relative;
+          button{
+            position: absolute;
+            left: 17px;
+            top: 50%;
+            transform: translateY(-56%);
+            border: 0;
+            background-color: transparent;
+            outline: none !important;
+            cursor: pointer;
+            svg{
+              transition: all ease-in-out 0.3s;
+              width: 12px;
+              height: auto;
+            }
+            &:hover{
+              svg{
+                fill: $red-color;
+              }
+            }
+          }
+        }
+      }
+      &:last-child{
+        td{
+          padding: 0;
+          &:first-child{
+            input{
+              padding: 1.2rem;
+              padding-left: 50px;
+              width: 100%;
+              font-size: 20px;
+              border: 0;
+              background-color: transparent;
+              outline: none;
+            }
+            background-color: $eee-color;
+          }
+          .old-price-container,.new-price-container{
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+            p{
+              margin: 0;
+              font-weight: 400;
+              font-size: 13px;
+            }
+            h4{
+              margin: 0;
+              font-weight: 900;
+              font-size: 33px;
+              span{
+                font-size: 18px;
+                font-weight: 400;
+              }
+            }
+          }
+          button.lg-btn{
+            margin: 0;
+            font-size: 25px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            width: 100%;
+          }
+          .old-price-container{
+            h4{
+              color: rgba($black-color, 0.5);
+              text-decoration: line-through;
+              text-decoration-color: #838383;
+            }
+          }
+          &:last-child{
+            border: 1px solid $border-color;
+            border-left: 0;
+          }
+          &:nth-child(3){
+            border: 1px solid $border-color;
+            border-left: 0;
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.edit-price-container {
+  &.input-group{
+    flex-wrap: nowrap !important;
+  }
+  .input-group-prepend {
+    margin: 0;
+  }
+
+  .input-group-append {
+    margin: 0;
+  }
+
+  input[type="number"] {
+    background: $white !important;
+    width: 33px;
+    height: 33px;
+    font-size: 17px;
+    font-weight: 900;
+    flex: 0;
+    padding: 0;
+    text-align: center;
+    border: 0;
+    margin: 0 2px 0 3px;
+    color: $black-color;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  button {
+    background-color: $f5-color ;
+    border-radius: 0;
+    border: 0;
+    font-size: 30px;
+    color: $black-color;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    position: relative;
+    &.minus-btn{
+      line-height: 1px;
+    }
+
+    &:hover {
+      background-color: $black-color;
+      color: $white;
+    }
+
+    &:focus, &:active &:visited {
+      box-shadow: none !important;
+      outline: none !important;
+    }
+  }
+}
+
+.swal2-actions{
+  .swal2-styled{
+    border-radius: 0 !important;
+  }
+  .swal2-styled:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+  .swal2-confirm{
+    order: 1;
+  }
+}
+.swal2-modal{
+  border-radius: 0 !important;
+}
+.swal2-container.swal2-backdrop-show{
+  background: rgba(0,0,0,.15);
+}
+.swal2-html-container{
+  font-size: 22px;
+  color: $black-color;
+  font-weight: 700;
+  @include media-breakpoint-down(sm){
+    font-size: 17px;
+  }
+}
+.swal2-title{
+  color: $black-color;
+}
+.swal2-popup{
+  padding-top: 40px;
+  padding-bottom: 30px;
+  width: 36em;
+}
+button:focus{
+  outline: 0 !important;
+}
+.box2-img-container{
+  img{
+    max-width: 50%;
+    @include media-breakpoint-down(sm){
+      max-width: 70%;
+    }
+  }
+}
+.pay-btn{
+  img {
+    height: 25px;
   }
 }
