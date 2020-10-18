@@ -6,6 +6,16 @@ $(document).ready(function () {
         $('.header-search').slideToggle(200)
     });
 
+    if ($('#different_address').length) {
+        $('#different_address').change(function () {
+            if (this.checked) {
+                $('.form-slide-down').slideDown(1000)
+            } else {
+                $('.form-slide-down').slideUp(500)
+            }
+
+        });
+    }
 
     if ($('#player').length) {
         const player = new Plyr('#player', {
@@ -19,7 +29,7 @@ $(document).ready(function () {
             $('.video-section h3').fadeIn(500);
         });
     }
-    if ($(".plus-btn").length){
+    if ($(".plus-btn").length) {
         //plus-btnValue minus-btnValue
         $(document).ready(function () {
             $(document).on('click', '.minus-btn, .plus-btn', function (e) {
@@ -57,7 +67,7 @@ $(document).ready(function () {
             // $("body").removeClass("headerIsFixed")
         }
     });
-    if($("#date").length){
+    if ($("#date").length) {
         $('#date').daterangepicker({
             "autoUpdateInput": false,
             "singleDatePicker": true,
@@ -70,11 +80,11 @@ $(document).ready(function () {
             "startDate": "02/25/1990",
             "endDate": "10/12/2020"
         });
-        $('#date').on('apply.daterangepicker', function(ev, picker) {
+        $('#date').on('apply.daterangepicker', function (ev, picker) {
             $(this).val(picker.startDate.format('DD/MM/YYYY'));
         });
     }
-    if($("#Purchase_Date").length){
+    if ($("#Purchase_Date").length) {
         $('#Purchase_Date').daterangepicker({
             "autoUpdateInput": false,
             "singleDatePicker": true,
@@ -85,21 +95,21 @@ $(document).ready(function () {
             "linkedCalendars": false,
             "showCustomRangeLabel": false,
         });
-        $('#Purchase_Date').on('apply.daterangepicker', function(ev, picker) {
+        $('#Purchase_Date').on('apply.daterangepicker', function (ev, picker) {
             $(this).val(picker.startDate.format('DD/MM/YYYY'));
         });
     }
-    if($("#customFile").length){
-    $('#customFile').on('change',function(){
-        //get the file name
-        var fileName = $(this).val();
-        var label = $(this).next('.custom-file-label');
-        //replace the "Choose a file" label
-        label.html(fileName);
-        label.addClass("file-has-change")
-    })
+    if ($("#customFile").length) {
+        $('#customFile').on('change', function () {
+            //get the file name
+            var fileName = $(this).val();
+            var label = $(this).next('.custom-file-label');
+            //replace the "Choose a file" label
+            label.html(fileName);
+            label.addClass("file-has-change")
+        })
     }
-    if($(".on-change").length) {
+    if ($(".on-change").length) {
         $(".on-change").parsley({
             triggerAfterFailure: 'input changed.bs.select apply.daterangepicker'
         });
@@ -157,34 +167,36 @@ $(document).ready(function () {
         }
     }, false);
 
-    if($(".mobile-check").length){
+    if ($(".mobile-check").length) {
         function check_if_mobile_checked() {
-            if ($("#blackPhone").is(':checked')){
+            if ($("#blackPhone").is(':checked')) {
                 $(".black-buy-phone").addClass("active");
                 $(".white-buy-phone").removeClass("active");
-            }else if ($("#whitePhone").is(':checked')){
+            } else if ($("#whitePhone").is(':checked')) {
                 $(".white-buy-phone").addClass("active");
                 $(".black-buy-phone").removeClass("active");
             }
         }
+
         check_if_mobile_checked();
-        $(".mobile-check input").on("change",function () {
+        $(".mobile-check input").on("change", function () {
             check_if_mobile_checked();
         });
     }
 
-    if($(".buds-check").length){
+    if ($(".buds-check").length) {
         function check_if_buds_checked() {
-            if ($("#blackBuds").is(':checked')){
+            if ($("#blackBuds").is(':checked')) {
                 $(".black-buy-buds").addClass("active");
                 $(".white-buy-buds").removeClass("active");
-            }else if ($("#whiteBuds").is(':checked')){
+            } else if ($("#whiteBuds").is(':checked')) {
                 $(".white-buy-buds").addClass("active");
                 $(".black-buy-buds").removeClass("active");
             }
         }
+
         check_if_buds_checked();
-        $(".buds-check input").on("change",function () {
+        $(".buds-check input").on("change", function () {
             check_if_buds_checked();
         });
     }
