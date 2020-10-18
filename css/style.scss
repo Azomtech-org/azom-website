@@ -18,6 +18,7 @@ $red-color: #EB402E;
 $f5-color: #f5f5f5;
 $border-color: #707070;
 $light-black: #5B5B5B;
+$green-color:#599744;
 
 $gotham: gotham, "sans-serif";
 $d-din: D-DIN, "sans-serif";
@@ -108,12 +109,22 @@ $letter-spacing: 1px;
   @extend %my-btn;
   background-color: $purple-color;
   color: $white;
-
 }
-
 .purple-btn {
   @extend %purple-btn;
 }
+
+%green-btn{
+  @extend %my-btn;
+  background-color: $green-color;
+  color: $white;
+}
+.green-btn{
+  @extend %green-btn;
+}
+
+
+
 
 .lg-btn {
   font-size: 35px;
@@ -1595,6 +1606,7 @@ footer {
 .page-container {
   padding-top: 150px;
   background-color: $f5-color;
+  min-height:calc(100vh - 91px) ;
 }
 
 .buy-section {
@@ -2550,5 +2562,34 @@ button:focus {
     @include media-breakpoint-down(md){
       font-size: 30px;
     }
+  }
+}
+.sub-page-title3 {
+  text-align: center;
+
+  h2 {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 50px;
+    letter-spacing: $letter-spacing;
+    @include media-breakpoint-down(md) {
+      font-size: 30px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 22px;
+    }
+  }
+
+  p {
+    font-size: 22px;
+    @include media-breakpoint-down(md) {
+      font-size: 18px;
+    }
+  }
+}
+.text-2{
+  font-size: 22px;
+  @include media-breakpoint-down(md) {
+    font-size: 18px;
   }
 }
