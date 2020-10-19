@@ -16,7 +16,12 @@ $(document).ready(function () {
 
         });
     }
-
+    if($(".js-modal-btn").length){
+        $(".js-modal-btn").modalVideo({
+            channel:'youtube',
+            autoplay: 1
+        });
+    }
     if ($('#player').length) {
         const player = new Plyr('#player', {
             speed: {selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]},
