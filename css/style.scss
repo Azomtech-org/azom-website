@@ -84,6 +84,9 @@ $letter-spacing: 1px;
 .bg-eee{
   background-color: $eee-color;
 }
+.green-color{
+  color: $green-color !important;
+}
 //extends
 %ellipsis{
   white-space: nowrap;
