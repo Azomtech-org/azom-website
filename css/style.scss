@@ -81,8 +81,16 @@ $letter-spacing: 1px;
   font-style: normal;
   font-display: fallback;
 }
-
+.bg-eee{
+  background-color: $eee-color;
+}
 //extends
+%ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 %my-btn {
   font-family: gotham, "sans-serif";
   display: flex;
@@ -346,7 +354,7 @@ $letter-spacing: 1px;
 }
 
 .big-title-1 {
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 900;
   @include media-breakpoint-down(lg) {
     font-size: 26px;
@@ -397,18 +405,36 @@ $letter-spacing: 1px;
     padding-bottom: 40px;
   }
 }
-
-.section-p-t {
-  padding-top: 100px;
+.section-m {
+  margin-top: 70px;
+  margin-bottom: 70px;
   @include media-breakpoint-down(md) {
-    padding-top: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
-
-.section-p-b {
-  padding-bottom: 100px;
+.section-p-t {
+  padding-top: 70px;
   @include media-breakpoint-down(md) {
-    padding-bottom: 50px;
+    padding-top: 40px;
+  }
+}
+.section-m-t {
+  margin-top: 70px;
+  @include media-breakpoint-down(md) {
+    margin-top: 40px;
+  }
+}
+.section-p-b {
+  padding-bottom: 70px;
+  @include media-breakpoint-down(md) {
+    padding-bottom: 40px;
+  }
+}
+.section-m-b {
+  margin-bottom: 70px;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 40px;
   }
 }
 
@@ -487,7 +513,7 @@ header {
         font-size: 18px;
 
         &:hover {
-          color: $yellow;
+          color: $blue-primary;
         }
       }
 
@@ -962,7 +988,7 @@ footer {
       }
 
       &:hover {
-        color: $yellow-color;
+        color: $blue-primary;
 
       }
     }
@@ -1952,7 +1978,7 @@ footer {
   color: $black-color;
 
   &:hover {
-    color: $yellow-color;
+    color: $blue-primary;
   }
 }
 
@@ -2699,6 +2725,123 @@ button:focus {
       &:not(:last-child){
         margin-bottom: 5px;
       }
+    }
+  }
+}
+.notification-link{
+  display: none;
+}
+.profile-header{
+  h3{
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    @extend %ellipsis;
+    @include media-breakpoint-down(md){
+      font-size: 40px;
+    }
+    @include media-breakpoint-down(sm){
+      font-size: 30px;
+    }
+  }
+}
+.profile-card{
+  padding: 40px 0 0 40px;
+  @include media-breakpoint-down(sm){
+    padding: 25px 25px 0 25px;
+  }
+  h3{
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 0;
+    font-size: 30px;
+    @include media-breakpoint-down(lg){
+      margin-top: 15px;
+    }
+    @include media-breakpoint-down(md){
+      font-size: 25px;
+    }
+    @include media-breakpoint-down(sm){
+      font-size: 20px;
+    }
+  }
+  h4{
+    font-weight: 400;
+    font-size: 30px;
+    @include media-breakpoint-down(md){
+      font-size: 25px;
+    }
+
+  }
+  .active-not-span{
+    display: block;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $red-color;
+    font-size: 27px;
+    font-weight: 900;
+    width: 220px;
+    text-align: center;
+    &.active{
+      background-color: $green-color;
+    }
+  }
+}
+.profile-card-content{
+  margin-top: 50px;
+  @include media-breakpoint-down(md){
+    margin-top: 20px;
+  }
+  p{
+    margin: 0;
+  }
+}
+.azom-care-content{
+  padding: 40px;
+  background-color: $f5-color;
+  margin-top: 40px;
+  @include media-breakpoint-down(md){
+    margin-top: 20px;
+  }
+  @include media-breakpoint-down(sm){
+    padding: 25px;
+  }
+  .sub-time{
+    font-weight: 700;
+    span{
+      font-size: 14px;
+    }
+  }
+  h4{
+    font-size: 30px;
+    font-weight: 900;
+    @include media-breakpoint-down(md){
+      font-size: 25px;
+    }
+    @include media-breakpoint-down(sm){
+      font-size: 20px;
+    }
+  }
+}
+.link-arrow{
+  position: relative;
+  padding-right: 20px;
+  &:after{
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-45%);
+    display: block;
+    height: 15px;
+    width: 8px;
+    background: url(../images/icon/arrow-right.svg) no-repeat center center;
+    background-size: 6px;
+    transition: all ease-in-out 0.4s;
+  }
+  &:hover{
+    &:after{
+      right: 5px;
     }
   }
 }

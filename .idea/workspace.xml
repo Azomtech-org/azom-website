@@ -6,7 +6,8 @@
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon/Group 19138.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +76,10 @@
       <workItem from="1602820408739" duration="1798000" />
       <workItem from="1602998644011" duration="7027000" />
       <workItem from="1603016872621" duration="5325000" />
-      <workItem from="1603082442435" duration="9410000" />
+      <workItem from="1603082442435" duration="9637000" />
+      <workItem from="1603182848279" duration="1438000" />
+      <workItem from="1603261600127" duration="7516000" />
+      <workItem from="1603343062006" duration="8128000" />
     </task>
     <servers />
   </component>
@@ -103,10 +107,10 @@
       <screen x="1366" y="-174" width="1920" height="1040" />
     </state>
     <state x="1827" y="-11" key="SettingsEditor/0.0.1366.728/1366.-174.1920.1040@1366.-174.1920.1040" timestamp="1600791110010" />
-    <state x="1982" y="153" key="run.anything.popup" timestamp="1600772285856">
+    <state x="1982" y="153" key="run.anything.popup" timestamp="1603347617601">
       <screen x="1366" y="-174" width="1920" height="1040" />
     </state>
-    <state x="1982" y="153" key="run.anything.popup/0.0.1366.728/1366.-174.1920.1040@1366.-174.1920.1040" timestamp="1600772285856" />
+    <state x="1982" y="153" key="run.anything.popup/0.0.1366.728/1366.-174.1920.1040@1366.-174.1920.1040" timestamp="1603347617601" />
     <state x="2394" y="55" width="672" height="678" key="search.everywhere.popup" timestamp="1603023193461">
       <screen x="1366" y="-174" width="1920" height="1040" />
     </state>
