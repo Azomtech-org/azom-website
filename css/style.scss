@@ -1770,6 +1770,13 @@ footer {
   @include media-breakpoint-down(sm) {
     padding: 15px 20px;
   }
+  &.total-summary{
+    background-color: $green-color;
+    border: 0;
+    p,h3{
+      color: $white;
+    }
+  }
 }
 
 .card-2 {
@@ -1832,7 +1839,16 @@ footer {
       font-size: 26px;
     }
   }
-
+  h4{
+    color: $light-black;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-top: 10px;
+    @include media-breakpoint-down(sm) {
+      font-size: 20px;
+    }
+  }
   p {
     font-size: 22px;
     @include media-breakpoint-down(md) {
@@ -2306,6 +2322,8 @@ input[type=number] {
               margin: 0;
               font-weight: 400;
               font-size: 13px;
+              position: relative;
+              top: 5px;
             }
 
             h4 {
@@ -2345,6 +2363,27 @@ input[type=number] {
             border: 1px solid $border-color;
             border-left: 0;
             border-right: 0;
+          }
+        }
+      }
+    }
+  }
+  &.order-table{
+    table{
+      tr{
+        &:last-child{
+          td{
+            background-color: transparent;
+            border-top: 1px solid $border-color;
+            border-bottom: 1px solid $border-color;
+            .new-price-container{
+              color: $light-black;
+              padding-top: 5px;
+              padding-bottom: 5px;
+            }
+            &:first-child{
+              border-left: 1px solid $border-color ;
+            }
           }
         }
       }
@@ -2845,6 +2884,80 @@ button:focus {
   &:hover{
     &:after{
       right: 5px;
+    }
+  }
+}
+.info-table{
+  tr{
+    &:first-child{
+      td{
+        @include media-breakpoint-up(lg){
+          padding-top: 0;
+        }
+      }
+    }
+    td{
+      font-size: 16px;
+      padding: 0.75rem 1rem 1rem 1rem;
+      @include media-breakpoint-down(lg){
+        padding: 0.5rem 0.5rem 0.5rem 0;
+      }
+      &:first-child{
+        font-weight: 700;
+      }
+    }
+  }
+}
+.bill-card{
+  padding: 0 50px;
+  @include media-breakpoint-down(md){
+    padding: 0 30px;
+  }
+  h3{
+    font-size: 30px;
+    font-weight: 900;
+    @include media-breakpoint-down(md){
+      font-size: 25px;
+    }
+    @include media-breakpoint-down(sm){
+      font-size: 20px;
+    }
+    @extend %ellipsis;
+  }
+  p{
+    font-weight: 700;
+  }
+}
+.payments-card{
+  h3{
+    font-weight: 900;
+    color: $light-black;
+    text-transform: uppercase;
+    @include media-breakpoint-down(md){
+      font-size: 25px;
+    }
+    @include media-breakpoint-down(sm){
+      font-size: 22px;
+    }
+  }
+}
+.payments-list{
+  margin-top: 40px;
+  @include media-breakpoint-down(lg){
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  li{
+    h4{
+      font-weight: 900;
+      font-size: 17px;
+      text-transform: uppercase;
+    }
+    &:not(:last-child){
+      margin-bottom: 30px;
+      @include media-breakpoint-down(lg){
+        margin-bottom: 20px;
+      }
     }
   }
 }
