@@ -2974,3 +2974,26 @@ button:focus {
     }
   }
 }
+.my-orders-table{
+  table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+
+    tr {
+      th {
+        border: 0;
+        font-weight: 400;
+      }
+
+      td {
+        border: 0;
+        white-space: nowrap;
+        vertical-align: middle;
+        padding: 1.2rem;
+        background-color: $white;
+        font-weight: 700;
+      }
+
+    }
+  }
+}
