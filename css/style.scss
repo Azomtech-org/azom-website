@@ -2011,7 +2011,20 @@ footer {
       font-size: 20px;
     }
   }
-
+  .form-control{
+    height: auto;
+    &:focus{
+      box-shadow: none;
+      background-color: $eee-color;
+    }
+  }
+  .input-group-text{
+    background-color: $black-color;
+    color: $white;
+    border: 0;
+    border-radius: 0;
+    font-weight: 900;
+  }
   input, .bootstrap-select > .dropdown-toggle, textarea {
     border: 0;
     background-color: $eee-color;

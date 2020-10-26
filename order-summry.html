@@ -376,35 +376,5 @@
 <script src="js/parsley.min.js"></script>
 <script src="js/sweetalert2.all.min.js"></script>
 <script src="js/main.js"></script>
-<script>
-    $('.delete-tr').on("click", function () {
-        let order_card = $(this).closest("tr");
-        Swal.fire({
-            text: "Are you sure you want to delete the item?",
-            // icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#EB402E',
-            cancelButtonColor: '#adb5bd',
-            confirmButtonText: 'Delete',
-            cancelButtonText: 'Cancel'
-        }).then((result) => {
-
-            if (result.value) {
-                order_card.fadeOut(500, function () {
-                    this.remove();
-                    //write BackEnd code here
-                });
-                // Swal.fire(
-                //     {
-                //         title:'Deleted',
-                //         // icon:'success',
-                //         confirmButtonText: 'Close',
-                //         confirmButtonColor: '#adb5bd'
-                //     }
-                // )
-            }
-        })
-    });
-</script>
 </body>
 </html>

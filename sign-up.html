@@ -173,7 +173,14 @@
                                 </label>
                             </div>
                             <div class="col-lg-6">
-                                <input id="mobile" type="number" placeholder="+966">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">+966</span>
+                                    </div>
+                                    <input type="number" id="mobile" class="form-control" placeholder="501234567" required
+                                           maxlength="9" minlength="9" data-parsley-length-message="Wrong mobile number"
+                                           data-parsley-required-message="Enter your mobile number">
+                                </div>
                             </div>
                         </div>
                     </div>
