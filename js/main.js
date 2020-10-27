@@ -86,7 +86,7 @@ $(document).ready(function () {
             "endDate": "10/12/2020"
         });
         $('#date').on('apply.daterangepicker', function (ev, picker) {
-            $(this).val(picker.startDate.format('DD/MM/YYYY'));
+            $(this).val(picker.startDate.format('YYYY-MM-DD'));
         });
     }
     if ($("#Purchase_Date").length) {
@@ -101,7 +101,7 @@ $(document).ready(function () {
             "showCustomRangeLabel": false,
         });
         $('#Purchase_Date').on('apply.daterangepicker', function (ev, picker) {
-            $(this).val(picker.startDate.format('DD/MM/YYYY'));
+            $(this).val(picker.startDate.format('YYYY-MM-DD'));
         });
     }
     if ($("#customFile").length) {
