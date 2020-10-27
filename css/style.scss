@@ -492,8 +492,8 @@ header {
       }
 
       .header-icon-list {
-        li:last-child {
-          a {
+        li:last-child .dropdown{
+          >a {
             @include media-breakpoint-up(lg) {
               padding-right: 0;
             }
@@ -3119,4 +3119,27 @@ button:focus {
 }
 .v-camera-details-list-container{
   margin-top: 50px;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
+.dropdown-menu{
+  border: 0;
+  overflow: hidden;
+  background-color: $black-color;
+  a{
+    color: $white;
+  }
+}
+.dropdown-item:first-child{
+  border-radius: 0;
 }
