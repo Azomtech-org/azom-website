@@ -3403,3 +3403,13 @@ button:focus {
     }
   }
 }
+.link-media{
+  a{
+    display: block;
+    white-space: nowrap;
+    font-size: 17px;
+  }
+  img{
+    width: 35px;
+  }
+}
