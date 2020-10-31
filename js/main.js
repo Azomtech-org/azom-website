@@ -274,4 +274,10 @@ $(document).ready(function () {
     //         // toggleActions: "play none none reverse",
     //     }
     // });
+    $(".touch-tabs-right a").on("click", function () {
+            $(".touch-tabs-left a").removeClass("active");
+    });
+    $(".touch-tabs-left a").on("click", function () {
+        $(".touch-tabs-right a").removeClass("active");
+    })
 });
