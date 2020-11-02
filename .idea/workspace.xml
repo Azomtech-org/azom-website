@@ -3,36 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="37f7ccb7-dee8-412e-b8b9-a9841d133101" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activate-warranty.html" beforeDir="false" afterPath="$PROJECT_DIR$/activate-warranty.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azom-app.html" beforeDir="false" afterPath="$PROJECT_DIR$/azom-app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/azom-care.html" beforeDir="false" afterPath="$PROJECT_DIR$/azom-care.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buds.html" beforeDir="false" afterPath="$PROJECT_DIR$/buds.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campaign-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/campaign-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/change-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/change-password.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desert2.html" beforeDir="false" afterPath="$PROJECT_DIR$/desert2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/error-pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/error-pay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forgot-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/forgot-password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ibrahim-ui.html" beforeDir="false" afterPath="$PROJECT_DIR$/ibrahim-ui.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-orders.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-summry.html" beforeDir="false" afterPath="$PROJECT_DIR$/order-summry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pay-desert.html" beforeDir="false" afterPath="$PROJECT_DIR$/pay-desert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/pay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/privacy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile2.html" beforeDir="false" afterPath="$PROJECT_DIR$/profile2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sign-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/sign-in.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/sign-up.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/success-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/success-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/terms-and-conditions.html" beforeDir="false" afterPath="$PROJECT_DIR$/terms-and-conditions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/verify-account.html" beforeDir="false" afterPath="$PROJECT_DIR$/verify-account.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +87,7 @@
       <workItem from="1603841383881" duration="122000" />
       <workItem from="1603877459872" duration="10067000" />
       <workItem from="1603965706670" duration="11000" />
-      <workItem from="1604146133135" duration="24444000" />
+      <workItem from="1604146133135" duration="27069000" />
     </task>
     <servers />
   </component>
@@ -144,10 +119,10 @@
       <screen x="1366" y="-174" width="1920" height="1040" />
     </state>
     <state x="2381" y="78" width="607" height="536" key="find.popup/0.0.1366.728/1366.-174.1920.1040@1366.-174.1920.1040" timestamp="1604207791215" />
-    <state x="1982" y="153" key="run.anything.popup" timestamp="1604186658627">
+    <state x="1982" y="153" key="run.anything.popup" timestamp="1604300489897">
       <screen x="1366" y="-174" width="1920" height="1040" />
     </state>
-    <state x="1982" y="153" key="run.anything.popup/0.0.1366.728/1366.-174.1920.1040@1366.-174.1920.1040" timestamp="1604186658627" />
+    <state x="1982" y="153" key="run.anything.popup/0.0.1366.728/1366.-174.1920.1040@1366.-174.1920.1040" timestamp="1604300489897" />
     <state x="2394" y="55" width="672" height="678" key="search.everywhere.popup" timestamp="1603023193461">
       <screen x="1366" y="-174" width="1920" height="1040" />
     </state>

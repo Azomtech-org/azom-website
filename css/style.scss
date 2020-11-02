@@ -116,8 +116,8 @@ $letter-spacing: 1px;
 
   &:hover {
     color: $black-color;
-    background-color: $yellow-color;
-    border-color: $yellow-color;
+    background-color: $blue-primary;
+    border-color: $blue-primary;
   }
 }
 
@@ -274,6 +274,9 @@ $letter-spacing: 1px;
 
 .white-btn {
   @extend %my-btn;
+  &:hover{
+    color: $white;
+  }
 }
 
 .black-btn {
@@ -474,9 +477,11 @@ a {
 .bg-dark {
   background-color: $black-color !important;
 }
-.bg-white-dark{
+
+.bg-white-dark {
   background-color: $eee-color !important;
 }
+
 header {
   padding: 10px 0;
   background-color: $black-color;
@@ -732,11 +737,13 @@ header {
     margin-top: 15px;
   }
 }
-.buds-section{
-  .home-hero-content{
+
+.buds-section {
+  .home-hero-content {
     color: $black-color;
   }
 }
+
 .plyr__poster {
   background-size: cover !important;
 }
@@ -971,7 +978,8 @@ header {
       margin-bottom: 20px;
     }
   }
-  a.link{
+
+  a.link {
     font-size: 22px;
   }
 }
@@ -1003,6 +1011,7 @@ footer {
     @include media-breakpoint-down(md) {
       gap: 15px;
     }
+
     a {
       color: $black-color;
       font-weight: 700;
@@ -2910,11 +2919,12 @@ button:focus {
     font-weight: 900;
     width: 220px;
     text-align: center;
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       font-size: 22px;
       width: 170px;
       font-weight: 700;
     }
+
     &.active {
       background-color: $green-color;
     }
@@ -3336,9 +3346,10 @@ button:focus {
 .touch-tabs {
   li {
     display: block;
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(md) {
       margin-bottom: 30px;
     }
+
     a {
       color: rgba($black-color, 0.28);
 
@@ -3372,20 +3383,24 @@ button:focus {
     }
   }
 }
-.touch-tabs-content-main-img{
-  img{
+
+.touch-tabs-content-main-img {
+  img {
     max-width: 60%;
   }
 }
-.touch-tabs-content-container{
+
+.touch-tabs-content-container {
   padding-bottom: 30px;
   position: relative;
-  .touch-tabs-content{
+
+  .touch-tabs-content {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    img{
+
+    img {
       max-width: 130px;
       width: auto;
       height: auto;
@@ -3393,25 +3408,29 @@ button:focus {
     }
   }
 }
-.link-media{
-  a{
+
+.link-media {
+  a {
     display: block;
     white-space: nowrap;
     font-size: 17px;
   }
-  img{
+
+  img {
     width: 35px;
   }
 }
-.home-hero-btn{
-  li{
-    &:not(:last-child){
-      @include media-breakpoint-up(lg){
+
+.home-hero-btn {
+  li {
+    &:not(:last-child) {
+      @include media-breakpoint-up(lg) {
         margin-right: 40px;
       }
     }
   }
 }
+
 .link-arrow {
   position: relative;
   padding-right: 20px;
@@ -3434,23 +3453,27 @@ button:focus {
     &:after {
       right: 5px;
     }
+
     color: $blue-primary;
   }
 
-  &.white-arrow-link{
+  &.white-arrow-link {
     color: $white;
+
     &:hover {
       color: $blue-primary;
     }
+
     &:after {
       background: url(../images/icon/white-arrow-right.svg) no-repeat center center;
       background-size: 6px;
     }
   }
-  &.big-link{
-    @include media-breakpoint-up(lg){
+
+  &.big-link {
+    @include media-breakpoint-up(lg) {
       font-size: 20px;
-      &:after{
+      &:after {
         right: 8px;
         transform: translateY(-35%);
       }
@@ -3460,24 +3483,62 @@ button:focus {
       &:after {
         right: 5px;
       }
+
       color: $blue-primary;
     }
   }
 }
-.under-link{
+
+.under-link {
   text-decoration: underline;
-  &:hover{
+
+  &:hover {
     text-decoration: underline;
   }
 }
+
 .social-section {
-  @include media-breakpoint-down(md){
+  @include media-breakpoint-down(md) {
     text-align: center;
   }
-a{
-  border: 0 !important;
-  &:hover{
-    background-color: transparent;
+
+  a {
+    border: 0 !important;
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 }
+.drop-container{
+  padding: .25rem 1.5rem;
+  p{
+    color: $white;
+    margin-bottom: 5px;
+  }
+  a.drop-btn{
+    margin-top:0;
+    color: $black-color;
+    font-size: 15px;
+    padding: 5px;
+    height: 34px;
+    margin-bottom: 10px;
+    &:hover{
+      color: $white;
+    }
+  }
+  .row{
+    margin-left: -5px;
+    margin-right: -5px;
+    .col{
+      padding-right:5px;
+      padding-left: 5px;
+    }
+  }
+  .border-bottom{
+    border-bottom-color:#707070 !important; ;
+  }
+}
+.account-drop{
+  min-width: 12em;
 }
