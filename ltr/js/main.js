@@ -16,9 +16,9 @@ $(document).ready(function () {
 
         });
     }
-    if($(".js-modal-btn").length){
+    if ($(".js-modal-btn").length) {
         $(".js-modal-btn").modalVideo({
-            channel:'youtube',
+            channel: 'youtube',
             autoplay: 1
         });
     }
@@ -275,9 +275,10 @@ $(document).ready(function () {
     //     }
     // });
     $(".touch-tabs-right a").on("click", function () {
-            $(".touch-tabs-left a").removeClass("active");
+        $(".touch-tabs-left a").removeClass("active");
     });
     $(".touch-tabs-left a").on("click", function () {
         $(".touch-tabs-right a").removeClass("active");
-    })
+    });
+
 });

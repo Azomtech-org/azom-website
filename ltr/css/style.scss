@@ -274,7 +274,8 @@ $letter-spacing: 1px;
 
 .white-btn {
   @extend %my-btn;
-  &:hover{
+
+  &:hover {
     color: $white;
   }
 }
@@ -2861,7 +2862,28 @@ button:focus {
 }
 
 .notification-link {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: $black-color;
+  &:hover{
+    color: $blue-primary;
+  }
+  span.notification-text{
+    font-size: 30px;
+    @include media-breakpoint-down(lg){
+      display: none;
+    }
+  }
+  span.notification-img{
+    position: relative;
+    top: -5px;
+  }
+  &.active{
+    #Ellipse_858{
+      fill: $red-color;
+    }
+  }
 }
 
 .profile-header {
@@ -2874,7 +2896,8 @@ button:focus {
       font-size: 40px;
     }
     @include media-breakpoint-down(sm) {
-      font-size: 30px;
+      font-size: 20px;
+      font-weight: 700;
     }
   }
 }
@@ -2921,7 +2944,7 @@ button:focus {
     text-align: center;
     @include media-breakpoint-down(md) {
       font-size: 22px;
-      width: 170px;
+      width: 145px;
       font-weight: 700;
     }
 
@@ -3510,35 +3533,58 @@ button:focus {
     }
   }
 }
-.drop-container{
+
+.drop-container {
   padding: .25rem 1.5rem;
-  p{
+
+  p {
     color: $white;
     margin-bottom: 5px;
   }
-  a.drop-btn{
-    margin-top:0;
+
+  a.drop-btn {
+    margin-top: 0;
     color: $black-color;
     font-size: 15px;
     padding: 5px;
     height: 34px;
     margin-bottom: 10px;
-    &:hover{
+
+    &:hover {
       color: $white;
     }
   }
-  .row{
+
+  .row {
     margin-left: -5px;
     margin-right: -5px;
-    .col{
-      padding-right:5px;
+
+    .col {
+      padding-right: 5px;
       padding-left: 5px;
     }
   }
-  .border-bottom{
-    border-bottom-color:#707070 !important; ;
+
+  .border-bottom {
+    border-bottom-color: #707070 !important;;
   }
 }
-.account-drop{
+
+.account-drop {
   min-width: 12em;
+}
+.red-link{
+  color: $red-color;
+  &:hover{
+    color: $blue-primary;
+  }
+}
+.clear-notification{
+  font-size: 20px;
+}
+.notification-not-link{
+  &:hover{
+    color: $black-color;
+  }
+
 }
