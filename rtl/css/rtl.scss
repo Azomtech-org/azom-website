@@ -191,3 +191,16 @@ body{
   padding-right: 0;
   padding-left: 1.5rem;
 }
+.account-drop{
+  min-width: 15em;
+}
+header .navbar-dark .navbar-nav .nav-item.ar .nav-link{
+  line-height: 1.2;
+}
+.social-section{
+  .big-title-1{
+    @include media-breakpoint-up(lg){
+      font-size: 31px;
+    }
+  }
+}
