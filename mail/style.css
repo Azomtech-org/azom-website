@@ -152,7 +152,218 @@ a{
 .d-dl{
     font-family: "D-DIN",  sans-serif !important;
 }
+.bill-card h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+.bill-card h3 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.bill-card p {
+    font-weight: 700;
+    margin-top: 0;
+}
+.info-table tr td:first-child {
+    font-weight: 700;
+}
+@media (min-width: 992px) {
+    .info-table tr:first-child td {
+        padding-top: 0
+    }
+}
+
+.info-table tr td {
+    font-size: 16px;
+    padding: 0.75rem 1rem 1rem 1rem
+}
+
+@media (max-width: 1199.98px) {
+    .info-table tr td {
+        padding: 0.5rem 0.5rem 0.5rem 0
+    }
+}
+
+.info-table tr td:first-child {
+    font-weight: 700
+}
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.cart-table table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+.cart-table table tr th:first-child {
+    padding-left: 50px;
+}
+.cart-table table tr th {
+    border: 0;
+    font-weight: 400;
+}
+.table thead th {
+    vertical-align: bottom;
+    text-align: left;
+}
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+}
+.cart-table table tr td:first-child {
+    padding-left: 50px;
+    position: relative;
+}
+.cart-table table tr td {
+    border: 0;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 1.2rem;
+    background-color: #fff;
+    font-weight: 700;
+}
+.fw-400 {
+    font-weight: 400 !important;
+}
+.cart-table.order-table table tr:last-child td:first-child {
+    border-left: 1px solid #707070;
+}
+.cart-table.order-table table tr:last-child td {
+    background-color: transparent;
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+}
+.cart-table.order-table table tr:last-child td .new-price-container {
+    color: #5B5B5B;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.cart-table table tr:last-child td {
+    padding: 0;
+}
+.cart-table table tr:last-child td:last-child {
+    border: 1px solid #707070;
+    border-left: 0;
+}
+.cart-table table tr:last-child td .new-price-container p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 13px;
+    position: relative;
+    top: 5px;
+}
+.cart-table table tr:last-child td .new-price-container h4 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 33px;
+}
+.cart-table table tr:last-child td .new-price-container {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+.cart-table table tr:last-child td .new-price-container h4 span {
+    font-size: 18px;
+    font-weight: 400;
+}
+.title3 {
+    font-weight: 700;
+    font-size: 33px;
+}
+.card-2 {
+    background-color: #fff;
+    padding: 20px 30px;
+}
+.card-2 p {
+    margin: 0;
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.title3{
+    margin-top: 0;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+.card-2 h3 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.payments-card h3 {
+    font-weight: 900;
+    color: #5B5B5B;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+.section-p {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.card-1.total-summary {
+    background-color: #599744;
+    border: 0;
+}
+.card-1 {
+    padding: 20px 30px;
+}
+.card-1 h3 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 30px;
+    color: #5B5B5B;
+}
+.card-1.total-summary p {
+    color: #fff;
+}
+.card-1.total-summary h3 {
+    color: #fff;
+}
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+.card-1 p {
+    margin: 0;
+    color: #5B5B5B;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.payments-list li h4 {
+    font-weight: 900;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.payments-list li p{
+    margin-top: 5px;
+}
 @media (max-width: 992px) {
+    .card-2 p {
+        font-size: 17px;
+    }
+    .card-2 h3 {
+        font-size: 22px;
+    }
     .bottom-link a{
         font-size: 30px;
     }
