@@ -48,6 +48,7 @@ html{box-sizing:border-box;-ms-overflow-style:scrollbar}*,::after,::before{box-s
 }
 
 body{
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
     font-family: "gotham", sans-serif;
@@ -56,6 +57,12 @@ body{
     background: #000000;
     color: white;
     padding: 25px 0;
+}
+.page-container{
+    background-color: #f5f5f5;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 144px);
 }
 .text-center{
     text-align: center !important;
@@ -99,6 +106,10 @@ a{
 .big-black-btn:hover{
     background-color: #185ABC;
 }
+.social{
+    width: 100%;
+    align-self: flex-end;
+}
 .footer-social a.social-container{
     width: 70px;
     height: 70px;
@@ -117,7 +128,17 @@ a{
 .d-1{
     font-size: 20px;
 }
+.my-card h3{
+    margin-top: 0;
+}
+.my-card{
+    background-color: #fff;
+    padding: 50px;
+}
 @media (max-width: 992px) {
+    .page-container{
+        min-height: auto;
+    }
     .header-info-container{
         text-align: center;
     }
@@ -146,5 +167,8 @@ a{
     }
     .d-1{
         font-size: 16px;
+    }
+    .my-card{
+        padding: 20px;
     }
 }
