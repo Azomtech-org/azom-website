@@ -204,3 +204,7 @@ header .navbar-dark .navbar-nav .nav-item.ar .nav-link{
     }
   }
 }
+.check-2-container .check-2-box:not(:last-child){
+  margin-right: 0;
+  margin-left: 10px;
+}

@@ -3588,3 +3588,43 @@ button:focus {
   }
 
 }
+.check-2-container{
+  display: flex;
+  .check-2-box{
+    width: 70px;
+    height: 70px;
+    input:checked + label{
+      border-color: $black-color;
+    }
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+    label{
+      display: block;
+      border-radius: 50%;
+      padding: 3px;
+      cursor: pointer;
+      border: 3px solid transparent;
+      transition: all ease-in-out 0.3s;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.item-color-info{
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.reset-mobile-check{
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.hide-in-mobile{
+  @include media-breakpoint-down(sm){
+    display: none;
+  }
+}
