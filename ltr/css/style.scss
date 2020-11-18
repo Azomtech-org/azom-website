@@ -807,7 +807,7 @@ header {
   }
 
   p {
-    font-size: 25px;
+    font-size: 22px;
     @include media-breakpoint-down(md) {
       font-size: 17px;
     }
@@ -1511,12 +1511,14 @@ footer {
 }
 
 .a-care-themes {
-  a {
-    display: block;
-    text-align: center;
+  .col-6{
+    div {
+      display: block;
+      text-align: center;
 
-    img {
-      max-height: 115px;
+      img {
+        max-height: 115px;
+      }
     }
   }
 }
@@ -1529,6 +1531,17 @@ footer {
     .col-auto {
       padding-left: 5px;
       padding-right: 5px;
+      >div {
+        display: block;
+        margin-bottom: 10px;
+
+        img {
+          height: 57px;
+          @include media-breakpoint-down(lg) {
+            height: 50px;
+          }
+        }
+      }
     }
   }
 
@@ -1536,17 +1549,7 @@ footer {
     margin-top: 40px;
   }
 
-  a {
-    display: block;
-    margin-bottom: 10px;
 
-    img {
-      height: 57px;
-      @include media-breakpoint-down(lg) {
-        height: 50px;
-      }
-    }
-  }
 }
 
 .what-in-box-section {
@@ -1798,12 +1801,23 @@ footer {
   }
 
   h3 {
+    position: relative;
     margin: 0;
     font-weight: 900;
     font-size: 30px;
     color: $light-black;
     @include media-breakpoint-down(sm) {
       font-size: 22px;
+    }
+    span{
+      font-weight: 400;
+      font-size: 14px;
+      &.vta{
+        position: absolute;
+        bottom: -11px;
+        left: 0;
+        font-size: 11px;
+      }
     }
   }
 
@@ -3764,4 +3778,8 @@ button:focus {
       }
     }
   }
+}
+.home-hero-content p.vta-hero, p.vta-hero{
+  font-size: 14px;
+  color: #5b5b5b;
 }

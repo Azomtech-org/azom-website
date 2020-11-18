@@ -313,7 +313,7 @@ $(document).ready(function () {
         var $carousel = $("#main_carousal");
 
         $carousel.carousel({
-            interval: false,
+            interval: 4000,
             keyboard: true,
             pause:false
         });
