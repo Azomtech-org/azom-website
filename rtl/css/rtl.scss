@@ -208,3 +208,12 @@ header .navbar-dark .navbar-nav .nav-item.ar .nav-link{
   margin-right: 0;
   margin-left: 10px;
 }
+.main-carousal .carousel-item.second-item img{
+  right: -20vw;
+  left: auto;
+  @include media-breakpoint-down(lg) {
+    right: -12vw;
+    left: auto;
+  }
+
+}

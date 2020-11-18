@@ -307,4 +307,23 @@ $(document).ready(function () {
         $(".touch-tabs-right a").removeClass("active");
     });
 
+    function carousal() {
+        var $carousel = $("#main_carousal");
+
+        $carousel.carousel({
+            interval: 4000,
+            keyboard: true,
+            pause:false
+        });
+        $(document).keyup(function(e) {
+            if(e.which === 39) {
+                $carousel.carousel("next");
+            } else if(e.which === 37) {
+                $carousel.carousel("prev");
+            }
+        });
+    }
+    if($("#main_carousal").length){
+        carousal();
+    }
 });
