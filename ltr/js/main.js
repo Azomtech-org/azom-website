@@ -307,23 +307,63 @@ $(document).ready(function () {
         $(".touch-tabs-right a").removeClass("active");
     });
 
-    function carousal() {
-        var $carousel = $("#main_carousal");
+    // function carousal() {
+    //     var $carousel = $("#main_carousal");
+    //
+    //     $carousel.carousel({
+    //         interval: 4000,
+    //         keyboard: true,
+    //         pause:false
+    //     });
+    //     $(document).keyup(function(e) {
+    //         if(e.which === 39) {
+    //             $carousel.carousel("next");
+    //         } else if(e.which === 37) {
+    //             $carousel.carousel("prev");
+    //         }
+    //     });
+    // }
+    // if($("#main_carousal").length){
+    //     carousal();
+    // }
+});
 
-        $carousel.carousel({
-            interval: 4000,
-            keyboard: true,
-            pause:false
-        });
-        $(document).keyup(function(e) {
-            if(e.which === 39) {
-                $carousel.carousel("next");
-            } else if(e.which === 37) {
-                $carousel.carousel("prev");
-            }
-        });
-    }
-    if($("#main_carousal").length){
-        carousal();
+var swiperAnimation = new SwiperAnimation();
+var swiper = new Swiper(".swiper-container", {
+    autoplay: {
+        delay: 10000,
+        disableOnInteraction: false
+    },
+    spaceBetween: 30,
+    effect: 'fade',
+    speed: 500,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction"
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+    on: {
+        init: function () {
+            swiperAnimation.init(this).animate();
+            $(".swiper-progress-bar").removeClass("animate");
+            $(".swiper-progress-bar").removeClass("active");
+            $(".swiper-progress-bar").eq(0).addClass("animate");
+            $(".swiper-progress-bar").eq(0).addClass("active");
+        },
+        slideChange: function () {
+            swiperAnimation.init(this).animate();
+        },
+        slideChangeTransitionStart: function () {
+            $(".swiper-progress-bar").removeClass("animate");
+            $(".swiper-progress-bar").removeClass("active");
+            $(".swiper-progress-bar").eq(0).addClass("active");
+        },
+        slideChangeTransitionEnd: function () {
+            $(".swiper-progress-bar").eq(0).addClass("animate");
+        }
     }
 });

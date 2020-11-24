@@ -1,6 +1,7 @@
 @import "plyr.css";
 @import "daterangepicker.css";
 @import "sweetalert2.min.css";
+@import "animate.min.css";
 @import "bootstrap-select.min.css";
 @import "modal-video.min.css";
 @import "scss/_functions.scss";
@@ -30,7 +31,7 @@ $letter-spacing: 2px;
   src: url(../fonts/arabic/IBMPlexSansArabic-Regular.ttf);
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;;
 }
 
 @font-face {
@@ -38,7 +39,7 @@ $letter-spacing: 2px;
   src: url(../fonts/GothamNarrow-Book.otf);
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;;
 }
 
 @font-face {
@@ -46,7 +47,7 @@ $letter-spacing: 2px;
   src: url(../fonts/GothamNarrow-Medium.otf);
   font-weight: 500;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;;
 }
 
 @font-face {
@@ -54,7 +55,7 @@ $letter-spacing: 2px;
   src: url(../fonts/GothamNarrow-Bold.otf);
   font-weight: 700;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;;
 }
 
 @font-face {
@@ -62,7 +63,7 @@ $letter-spacing: 2px;
   src: url(../fonts/GothamNarrow-Black.otf);
   font-weight: 900;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;;
 }
 
 @font-face {
@@ -70,7 +71,7 @@ $letter-spacing: 2px;
   src: url(../fonts/D-DINCondensed-Bold.woff) format('woff'), url(../fonts/D-DINCondensed-Bold.otf) format('eot');
   font-weight: 700;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;;
 }
 
 @font-face {
@@ -78,7 +79,7 @@ $letter-spacing: 2px;
   src: url(../fonts/D-DIN.woff) format('woff'), url(../fonts/D-DIN.otf) format('eot');
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;;
 }
 
 .bg-eee {
@@ -484,7 +485,7 @@ a {
 }
 
 header {
-  padding: 10px 0;
+  padding: 0;
   background-color: $black-color;
   position: absolute;
   z-index: 999;
@@ -534,7 +535,7 @@ header {
         font-size: 18px;
 
         &:hover {
-          color: $blue-primary;
+          color: #b7b7b7;
         }
       }
 
@@ -1092,7 +1093,7 @@ footer {
   }
 
   p {
-    font-size: 25px;
+    font-size: 24px;
     margin: 0 40px;
     @include media-breakpoint-down(sm) {
       font-size: 16px;
@@ -3495,14 +3496,14 @@ button:focus {
       right: 5px;
     }
 
-    color: $blue-primary;
+    color: #707070;
   }
 
   &.white-arrow-link {
     color: $white;
 
     &:hover {
-      color: $blue-primary;
+      color: #707070;
     }
 
     &:after {
@@ -3525,7 +3526,7 @@ button:focus {
         right: 5px;
       }
 
-      color: $blue-primary;
+      color: #707070;
     }
   }
 }
@@ -3783,3 +3784,303 @@ button:focus {
   font-size: 14px;
   color: #5b5b5b;
 }
+.plyr__control--overlaid{
+  background-color: $black-color;
+  &:hover{
+    opacity: 1 !important;
+  }
+}
+.plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true],.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before{
+  background-color: $black-color;
+}
+.plyr--full-ui input[type=range]{
+  color: $black-color !important;
+}
+.swiper-progress-bar {
+  position: relative;
+  width: 100%;
+  display: block;
+  z-index: 1;
+  height: 3px;
+  .slide_progress-bar {
+    position: absolute;
+    height: 3px;
+    background: transparent;
+    width: auto;
+    clear: both;
+    opacity: 0;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #707070;
+      height: 100%;
+      width: 0;
+      content: "";
+    }
+  }
+  &.active {
+    .slide_progress-bar {
+      opacity: 1;
+    }
+  }
+  &.animate {
+    .slide_progress-bar {
+      &:after {
+        transition: width linear;
+        transition-delay: unset;
+        width: 100%;
+        transition-duration: 10s;
+      }
+    }
+  }
+}
+.swiper-slide{
+  height: 100vh;
+  padding-top: 71px;
+  overflow: hidden;
+  &.slide-1{
+    background-color: $f5-color;
+
+   }
+  &.slide-2{
+    background-color: $black-color;
+    color: $white ;
+  }
+  &.slide-3{
+    background-color: $f5-color;
+  }
+  &.slide-4{
+    background-color: $black-color;
+    color: $white ;
+  }
+}
+.swiper-controls{
+  position: absolute;
+  z-index: 10;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  .swiper-pagination-fraction{
+    width: auto;
+    display: inline-block;
+    position: static;
+    color: #7d7d7d;
+  }
+  .swiper-button-next{
+    margin-top: 0;
+    position: static;
+    margin-right: 15px;
+    outline: none !important;
+    svg{
+      width: 22px;
+      height: 20px;
+      path{
+        fill: #7d7d7d;
+        transition: all ease-in-out 0.3s;
+      }
+    }
+    &:hover{
+      svg{
+        path{
+          fill: #505050;
+        }
+      }
+    }
+  }
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+  display: none;
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0)
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0)
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+.animate__fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft
+}
+.slide1-img{
+  position: relative;
+  text-align: center;
+  img{
+    width: 75%;
+  }
+}
+.slide1-buds-container{
+  text-align: center;
+  position: relative;
+  border: 1px solid $black-color;
+  padding:50px 30px 20px 30px;
+  border-radius: 20px;
+  .slide1-buds-title{
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    background-color: $white;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    h3{
+      margin-bottom: 0;
+      font-weight: 700;
+      line-height: 26px;
+    }
+    p{
+      margin: 0;
+      font-size: 18px;
+    }
+  }
+  .azom{
+    span{
+      margin-top: -3px;
+    }
+    justify-content: center;
+    margin-bottom: 0;
+  }
+}
+.azom{
+  text-transform: uppercase;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  span{
+    font-weight: 700;
+    font-family: D-DIN,"sans-serif";
+    letter-spacing: 5px;
+    font-size: 30px;
+    padding-right: 5px;
+  }
+}
+.slide-phone-color-container{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  ul{
+    margin-bottom: 0;
+    img{
+      width: 45px;
+      height: auto;
+    }
+  }
+}
+.slide1-buds-img,.slide1-img{
+  height: 530px;
+}
+.slide1-buds-img{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.azom-big{
+  font-size: 45px;
+  span{
+    font-size: 60px;
+    padding-right: 20px;
+  }
+}
+.slide-content{
+  p{
+    font-size: 20px;
+    &.l-soon{
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+  }
+  .slide-price{
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0;
+    span{
+      font-weight: 400;
+    }
+  }
+}
+.small-azom{
+  font-size: 20px;
+  span{
+    padding-right: 0;
+    font-size: 23px;
+  }
+}
+.slid2-offer-container{
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  border: 2px solid $white;
+  padding:50px 30px 20px 30px;
+  border-radius: 20px;
+  img{
+    max-width: 130px;
+    margin-top: 40px;
+    width: 90%;
+  }
+  p{
+    font-size: 20px;
+  }
+  .warranty-slide-price{
+    h3{
+      font-weight: 900;
+      font-size: 26px;
+      .old-price{
+        text-decoration: line-through;
+        font-weight: 400;
+      }
+      .currency{
+        font-weight: 400;
+        font-size: 17px;
+      }
+    }
+    p.vta-hero{
+      font-size: 17px;
+    }
+  }
+}
+.slide1-sheild-title{
+  position: absolute;
+  top: -33px;
+  display: inline-block;
+  background-color: $black-color;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 20px;
+  margin: 0;
+  h3{
+    font-size: 33px;
+  }
+}
+.ibrahim-slide-img{
+  max-width: 80%;
+  width: 250px;
+}
+

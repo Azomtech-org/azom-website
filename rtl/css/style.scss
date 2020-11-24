@@ -30,7 +30,7 @@ $letter-spacing: 2px;
   src: url(../fonts/arabic/IBMPlexSansArabic-Regular.ttf);
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;;
 }
 
 @font-face {
@@ -38,7 +38,7 @@ $letter-spacing: 2px;
   src: url(../fonts/GothamNarrow-Book.otf);
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;;
 }
 
 @font-face {
@@ -46,7 +46,7 @@ $letter-spacing: 2px;
   src: url(../fonts/GothamNarrow-Medium.otf);
   font-weight: 500;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;;
 }
 
 @font-face {
@@ -54,7 +54,7 @@ $letter-spacing: 2px;
   src: url(../fonts/GothamNarrow-Bold.otf);
   font-weight: 700;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;;
 }
 
 @font-face {
@@ -62,7 +62,7 @@ $letter-spacing: 2px;
   src: url(../fonts/GothamNarrow-Black.otf);
   font-weight: 900;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;;
 }
 
 @font-face {
@@ -70,7 +70,7 @@ $letter-spacing: 2px;
   src: url(../fonts/D-DINCondensed-Bold.woff) format('woff'), url(../fonts/D-DINCondensed-Bold.otf) format('eot');
   font-weight: 700;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;;
 }
 
 @font-face {
@@ -78,7 +78,7 @@ $letter-spacing: 2px;
   src: url(../fonts/D-DIN.woff) format('woff'), url(../fonts/D-DIN.otf) format('eot');
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;;
 }
 
 .bg-eee {
@@ -1092,7 +1092,7 @@ footer {
   }
 
   p {
-    font-size: 25px;
+    font-size: 24px;
     margin: 0 40px;
     @include media-breakpoint-down(sm) {
       font-size: 16px;
@@ -1511,12 +1511,14 @@ footer {
 }
 
 .a-care-themes {
-  a {
-    display: block;
-    text-align: center;
+  .col-6{
+    div {
+      display: block;
+      text-align: center;
 
-    img {
-      max-height: 115px;
+      img {
+        max-height: 115px;
+      }
     }
   }
 }
@@ -1529,6 +1531,17 @@ footer {
     .col-auto {
       padding-left: 5px;
       padding-right: 5px;
+      >div {
+        display: block;
+        margin-bottom: 10px;
+
+        img {
+          height: 57px;
+          @include media-breakpoint-down(lg) {
+            height: 50px;
+          }
+        }
+      }
     }
   }
 
@@ -1536,17 +1549,7 @@ footer {
     margin-top: 40px;
   }
 
-  a {
-    display: block;
-    margin-bottom: 10px;
 
-    img {
-      height: 57px;
-      @include media-breakpoint-down(lg) {
-        height: 50px;
-      }
-    }
-  }
 }
 
 .what-in-box-section {

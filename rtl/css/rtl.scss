@@ -12,7 +12,7 @@ body{
   src: url(../fonts/arabic/IBMPlexSansArabic-Regular.ttf);
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;
 }
 
 @font-face {
@@ -20,7 +20,7 @@ body{
   src: url(../fonts/arabic/IBMPlexSansArabic-Medium.ttf);
   font-weight: 500;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;
 }
 
 @font-face {
@@ -28,7 +28,7 @@ body{
   src: url(../fonts/arabic/IBMPlexSansArabic-SemiBold.ttf);
   font-weight: 700;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;
 }
 
 @font-face {
@@ -36,7 +36,7 @@ body{
   src: url(../fonts/arabic/IBMPlexSansArabic-Bold.ttf);
   font-weight: 900;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;
 }
 
 @font-face {
@@ -44,7 +44,7 @@ body{
   src: url(../fonts/arabic/IBMPlexSansArabic-SemiBold.ttf);
   font-weight: 700;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;
 }
 
 @font-face {
@@ -52,7 +52,7 @@ body{
   src: url(../fonts/arabic/IBMPlexSansArabic-Regular.ttf);
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: auto;
 }
 .home-hero-btn {
   li {
@@ -195,7 +195,7 @@ body{
   min-width: 15em;
 }
 header .navbar-dark .navbar-nav .nav-item.ar .nav-link{
-  line-height: 1.2;
+  line-height: 1.5;
 }
 .social-section{
   .big-title-1{
