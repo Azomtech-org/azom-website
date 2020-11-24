@@ -274,6 +274,17 @@ $(document).ready(function () {
         });
     }
 
+    //VIDEO START / STOP
+    ScrollTrigger.create({
+        trigger: elem,
+        onEnter: myEnterFunc,
+        onLeave: myLeaveFunc,
+        onEnterBack: myEnterFunc,
+        onLeaveBack: myLeaveFunc,
+        start: "top",
+        end: "100%",
+    });
+
     // gsap.to(".clep-scroll", {
     //     webkitClipPath: 'polygon(' + arr1[0] + '%' + arr1[1] + '%,' + arr1[2] + '%' + arr1[3] + '%,' + arr1[4] + '%' + arr1[5] + '%,' + arr1[6] + '%' + arr1[7] + '%)',
     //     duration: 2,
