@@ -288,8 +288,8 @@ $letter-spacing: 2px;
   border-color: $black-color;
 
   &:hover {
-    border-color: $blue-color;
-    background: $blue-color;
+    border-color: #868686;
+    background: #2b2b2b;
     color: $white;
   }
 }
@@ -1610,7 +1610,7 @@ footer {
 }
 
 .box1-img {
-  margin-top: -30px;
+  max-height: 650px;
 }
 
 .border {
@@ -2593,12 +2593,12 @@ button:focus {
 }
 
 .box2-img-container {
-  img {
-    max-width: 50%;
-    @include media-breakpoint-down(sm) {
-      max-width: 70%;
-    }
-  }
+  //img {
+  //  max-width: 50%;
+  //  @include media-breakpoint-down(sm) {
+  //    max-width: 70%;
+  //  }
+  //}
 }
 
 .pay-btn {
@@ -4214,4 +4214,17 @@ button:focus {
   @include media-breakpoint-down(md){
     padding-top: 30px;
   }
+}
+
+.big-btn.black-outline-btn:before,.black-outline-btn span:before, .black-outline-btn span:after{
+  display: none;
+}
+.black-outline-btn:after{
+  background-color: $black-color;
+  transition-delay: 0s;
+
+}
+.black-outline-btn:hover:after{
+  transition-delay: 0s;
+
 }
