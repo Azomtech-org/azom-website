@@ -22,18 +22,7 @@ $(document).ready(function () {
             autoplay: 1
         });
     }
-    if ($('#player').length) {
-        const player = new Plyr('#player', {
-            speed: {selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]},
-            quality: {default: 720, options: [1080, 720, 480, 360]}
-        });
-        player.on('play', () => {
-            $('.video-section h3').fadeOut(500);
-        });
-        player.on('pause', () => {
-            $('.video-section h3').fadeIn(500);
-        });
-    }
+
     if ($(".plus-btn").length) {
         //plus-btnValue minus-btnValue
         $(document).ready(function () {
@@ -273,17 +262,35 @@ $(document).ready(function () {
             pin: true
         });
     }
+    if ($('#player').length) {
+        const player = new Plyr('#player', {
+            speed: {selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]},
+            quality: {default: 720, options: [1080, 720, 480, 360]}
+        });
+        player.on('play', () => {
+            $('.video-section h3').fadeOut(500);
+        });
+        player.on('pause', () => {
+            $('.video-section h3').fadeIn(500);
+        });
+        function startVideo(){
+            player.play();
+            // alert("hello")
+        }
+        function stopVideo(){
+            player.pause();
+        }
+        //VIDEO START / STOP
+            // startVideo();
+            ScrollTrigger.create({
+                trigger: ".video-section",
+                onToggle: self => self.isActive ? startVideo() : stopVideo(),
+                start: "top center",
+                end: "100%",
+            });
 
-    //VIDEO START / STOP
-    ScrollTrigger.create({
-        trigger: elem,
-        onEnter: myEnterFunc,
-        onLeave: myLeaveFunc,
-        onEnterBack: myEnterFunc,
-        onLeaveBack: myLeaveFunc,
-        start: "top",
-        end: "100%",
-    });
+    }
+
 
     // gsap.to(".clep-scroll", {
     //     webkitClipPath: 'polygon(' + arr1[0] + '%' + arr1[1] + '%,' + arr1[2] + '%' + arr1[3] + '%,' + arr1[4] + '%' + arr1[5] + '%,' + arr1[6] + '%' + arr1[7] + '%)',
@@ -337,44 +344,58 @@ $(document).ready(function () {
     // if($("#main_carousal").length){
     //     carousal();
     // }
-});
+    if($(".swiper-container").length) {
+        var swiperAnimation = new SwiperAnimation();
+        var swiper = new Swiper(".swiper-container", {
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false
+            },
+            spaceBetween: 30,
+            effect: 'fade',
+            speed: 500,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction"
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            on: {
+                init: function () {
+                    swiperAnimation.init(this).animate();
+                    $(".swiper-progress-bar").removeClass("animate");
+                    $(".swiper-progress-bar").removeClass("active");
+                    $(".swiper-progress-bar").eq(0).addClass("animate");
+                    $(".swiper-progress-bar").eq(0).addClass("active");
+                },
+                slideChange: function () {
+                    swiperAnimation.init(this).animate();
 
-var swiperAnimation = new SwiperAnimation();
-var swiper = new Swiper(".swiper-container", {
-    autoplay: {
-        delay: 10000,
-        disableOnInteraction: false
-    },
-    spaceBetween: 30,
-    effect: 'fade',
-    speed: 500,
-    loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        type: "fraction"
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-    },
-    on: {
-        init: function () {
-            swiperAnimation.init(this).animate();
-            $(".swiper-progress-bar").removeClass("animate");
-            $(".swiper-progress-bar").removeClass("active");
-            $(".swiper-progress-bar").eq(0).addClass("animate");
-            $(".swiper-progress-bar").eq(0).addClass("active");
-        },
-        slideChange: function () {
-            swiperAnimation.init(this).animate();
-        },
-        slideChangeTransitionStart: function () {
-            $(".swiper-progress-bar").removeClass("animate");
-            $(".swiper-progress-bar").removeClass("active");
-            $(".swiper-progress-bar").eq(0).addClass("active");
-        },
-        slideChangeTransitionEnd: function () {
-            $(".swiper-progress-bar").eq(0).addClass("animate");
-        }
+                },
+                slideChangeTransitionStart: function () {
+                    $(".swiper-progress-bar").removeClass("animate");
+                    $(".swiper-progress-bar").removeClass("active");
+                    $(".swiper-progress-bar").eq(0).addClass("active");
+                },
+                touchStart: function(){
+                    $(".swiper-progress-bar").removeClass("animate");
+                    $(".swiper-progress-bar").removeClass("active");
+                    $(".swiper-progress-bar").eq(0).addClass("active");
+                },
+                slideChangeTransitionEnd: function () {
+                    $(".swiper-progress-bar").eq(0).addClass("animate");
+                },
+                transitionEnd:function () {
+                    $(".swiper-progress-bar").eq(0).addClass("animate");
+                }
+
+
+            }
+        });
     }
 });
+
+
