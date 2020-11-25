@@ -221,3 +221,18 @@ header .navbar-dark .navbar-nav .nav-item.ar .nav-link{
   right: 0;
   left: auto;
 }
+  .azom ,.azom-big,.small-azom{
+    direction: ltr;
+  }
+.small-azom.align-items-end{
+  align-items: center !important;
+}
+.small-azom{
+  span{
+    padding-right: 5px;
+  }
+}
+.swiper-controls .swiper-button-next{
+  margin-right: 0;
+  margin-left: 10px;
+}

@@ -980,8 +980,8 @@ header {
   p {
     margin-bottom: 30px;
     @include media-breakpoint-down(md) {
-       margin-bottom: 20px;
-     }
+      margin-bottom: 20px;
+    }
     @include media-breakpoint-down(sm) {
       margin-bottom: 15px;
     }
@@ -1508,18 +1508,21 @@ footer {
 }
 
 .o-system {
-  a {
-    display: block;
-    text-align: center;
-    @include media-breakpoint-down(lg) {
-      margin: 15px 0;
-    }
-    @include media-breakpoint-down(lg) {
-      img {
-        max-width: 150px;
+  .col-lg-3{
+    > div {
+      display: block;
+      text-align: center;
+      @include media-breakpoint-down(lg) {
+        margin: 15px 0;
+      }
+      @include media-breakpoint-down(lg) {
+        img {
+          max-width: 150px;
+        }
       }
     }
   }
+
 }
 
 .a-care-themes {
@@ -3863,16 +3866,16 @@ button:focus {
   &.slide-1{
     background-color: $f5-color;
 
-   }
+  }
   &.slide-2{
     background-color: $black-color;
     color: $white ;
     @include media-breakpoint-down(sm){
-     .slide-content{
-       p{
-         margin-bottom: 5px;
-       }
-     }
+      .slide-content{
+        p{
+          margin-bottom: 5px;
+        }
+      }
     }
   }
   &.slide-3{
@@ -4062,13 +4065,17 @@ button:focus {
       @include media-breakpoint-down(md){
         width: 28px;
       }
+      @include media-breakpoint-down(sm){
+        width: 26px;
+      }
     }
   }
 }
 .slide1-buds-img,.slide1-img{
   height: 530px;
   @include media-breakpoint-down(sm){
-    height: 325px;
+    height: auto;
+    padding-bottom: 36px;
   }
 }
 .slide1-buds-img{
@@ -4226,5 +4233,17 @@ button:focus {
 }
 .black-outline-btn:hover:after{
   transition-delay: 0s;
+}
+.slide-1 .col-lg-7 .row{
 
+  @include media-breakpoint-down(sm){
+    align-items: flex-end;
+  }
+}
+.bg-white-dark{
+  .slide-1{
+    height: auto;
+    padding-top: 0;
+    background-color: $eee-color;
+  }
 }
