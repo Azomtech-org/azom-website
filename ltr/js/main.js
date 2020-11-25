@@ -219,7 +219,13 @@ $(document).ready(function () {
         $(this).addClass("d-none");
 
     });
-
+    $(".care-reset").on("click", function () {
+        $(".care-check input").prop('checked', false);
+        $(this).addClass("d-none");
+    });
+    $(".care-check input").on("change", function () {
+        $(".care-reset").removeClass("d-none");
+    });
     let socialBox = $('.our-social a');
     if (socialBox.length) {
         let divWidth = socialBox.width();
