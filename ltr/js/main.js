@@ -265,7 +265,7 @@ $(document).ready(function () {
     if ($('#player').length) {
         const player = new Plyr('#player', {
             speed: {selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]},
-            quality: {default: 720, options: [1080, 720, 480, 360]}
+            quality: {default: 480, options: [1080, 720, 480, 360]}
         });
         player.on('play', () => {
             $('.video-section h3').fadeOut(500);
