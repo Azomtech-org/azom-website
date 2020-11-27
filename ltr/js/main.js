@@ -165,60 +165,80 @@ $(document).ready(function () {
         function check_if_mobile_checked() {
             if ($("#blackPhone").is(':checked')) {
                 $(".black-buy-phone").addClass("active");
-                $(".white-buy-phone").removeClass("active");
-                $(".mobile-color-text").text("Black Waaba");
-            } else if ($("#whitePhone").is(':checked')) {
-                $(".white-buy-phone").addClass("active");
+                $(".mobile-black-color").removeClass("d-none");
+            }
+            if (!$("#blackPhone").is(':checked')) {
                 $(".black-buy-phone").removeClass("active");
-                $(".mobile-color-text").text("DAHNA WHITE");
+                $(".mobile-black-color").addClass("d-none");
+            }
+            if ($("#whitePhone").is(':checked')) {
+                $(".white-buy-phone").addClass("active");
+                $(".mobile-white-color").removeClass("d-none");
+            }
+            if (!$("#whitePhone").is(':checked')){
+                $(".white-buy-phone").removeClass("active");
+                $(".mobile-white-color").addClass("d-none");
+
             }
         }
-
         check_if_mobile_checked();
         $(".mobile-check input").on("change", function () {
             check_if_mobile_checked();
-            $(".mobile-color-change").removeClass("d-none");
-            $(".mobile-reset").removeClass("d-none");
+            // $(".mobile-color-change").removeClass("d-none");
+            // $(".mobile-reset").removeClass("d-none");
         });
+    // $(".mobile-reset").on("click", function () {
+    //
+    //     $(".mobile-check input").prop('checked', false);
+    //     $(".black-buy-phone").removeClass("active");
+    //     $(".white-buy-phone").removeClass("active");
+    //     $(".mobile-color-change").addClass("d-none");
+    //     $(this).addClass("d-none");
+    //
+    // });
     }
-    $(".mobile-reset").on("click", function () {
-
-        $(".mobile-check input").prop('checked', false);
-        $(".black-buy-phone").removeClass("active");
-        $(".white-buy-phone").removeClass("active");
-        $(".mobile-color-change").addClass("d-none");
-        $(this).addClass("d-none");
-
-    });
     if ($(".buds-check").length) {
         function check_if_buds_checked() {
             if ($("#blackBuds").is(':checked')) {
                 $(".black-buy-buds").addClass("active");
-                $(".white-buy-buds").removeClass("active");
-                $(".buds-color-text").text("Black");
-            } else if ($("#whiteBuds").is(':checked')) {
-                $(".white-buy-buds").addClass("active");
+                $(".buds-black-color").removeClass("d-none");
+
+            }
+            if (!$("#blackBuds").is(':checked')){
                 $(".black-buy-buds").removeClass("active");
+                $(".buds-black-color").addClass("d-none");
+
+            }
+            if ($("#whiteBuds").is(':checked')) {
+                $(".white-buy-buds").addClass("active");
                 $(".buds-color-text").text("White");
+                $(".buds-white-color").removeClass("d-none");
+            }
+            if (!$("#whiteBuds").is(':checked')){
+                $(".white-buy-buds").removeClass("active");
+                $(".buds-white-color").addClass("d-none");
+
             }
         }
-
         check_if_buds_checked();
         $(".buds-check input").on("change", function () {
             check_if_buds_checked();
             $(".buds-color-change").removeClass("d-none");
-            $(".buds-reset").removeClass("d-none");
+            // $(".buds-reset").removeClass("d-none");
         });
+        // $(".buds-reset").on("click", function () {
+        //
+        //     $(".buds-check input").prop('checked', false);
+        //     $(".white-buy-buds").removeClass("active");
+        //     $(".black-buy-buds").removeClass("active");
+        //     $(".buds-color-change").addClass("d-none");
+        //     $(this).addClass("d-none");
+        //
+        // });
     }
-    $(".buds-reset").on("click", function () {
 
-        $(".buds-check input").prop('checked', false);
-        $(".white-buy-buds").removeClass("active");
-        $(".black-buy-buds").removeClass("active");
-        $(".buds-color-change").addClass("d-none");
-        $(this).addClass("d-none");
 
-    });
+
     $(".care-reset").on("click", function () {
         $(".care-check input").prop('checked', false);
         $(this).addClass("d-none");

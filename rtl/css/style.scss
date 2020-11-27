@@ -31,7 +31,7 @@ $letter-spacing: 2px;
   src: url(../fonts/arabic/IBMPlexSansArabic-Regular.ttf);
   font-weight: 400;
   font-style: normal;
-  font-display: auto;;
+  font-display: swap;
 }
 
 @font-face {
@@ -39,7 +39,7 @@ $letter-spacing: 2px;
   src: url(../fonts/GothamNarrow-Book.otf);
   font-weight: 400;
   font-style: normal;
-  font-display: auto;;
+  font-display: swap;;
 }
 
 @font-face {
@@ -47,7 +47,7 @@ $letter-spacing: 2px;
   src: url(../fonts/GothamNarrow-Medium.otf);
   font-weight: 500;
   font-style: normal;
-  font-display: auto;;
+  font-display: swap;;
 }
 
 @font-face {
@@ -55,7 +55,7 @@ $letter-spacing: 2px;
   src: url(../fonts/GothamNarrow-Bold.otf);
   font-weight: 700;
   font-style: normal;
-  font-display: auto;;
+  font-display: swap;;
 }
 
 @font-face {
@@ -63,7 +63,7 @@ $letter-spacing: 2px;
   src: url(../fonts/GothamNarrow-Black.otf);
   font-weight: 900;
   font-style: normal;
-  font-display: auto;;
+  font-display: swap;;
 }
 
 @font-face {
@@ -71,7 +71,7 @@ $letter-spacing: 2px;
   src: url(../fonts/D-DINCondensed-Bold.woff) format('woff'), url(../fonts/D-DINCondensed-Bold.otf) format('eot');
   font-weight: 700;
   font-style: normal;
-  font-display: auto;;
+  font-display: swap;;
 }
 
 @font-face {
@@ -79,7 +79,7 @@ $letter-spacing: 2px;
   src: url(../fonts/D-DIN.woff) format('woff'), url(../fonts/D-DIN.otf) format('eot');
   font-weight: 400;
   font-style: normal;
-  font-display: auto;;
+  font-display: swap;;
 }
 
 .bg-eee {
@@ -514,6 +514,11 @@ header {
       }
 
       .header-icon-list {
+        a{
+          svg{
+            width: 20px;
+          }
+        }
         li:last-child .dropdown {
           > a {
             @include media-breakpoint-up(lg) {
@@ -1702,7 +1707,7 @@ footer {
 }
 
 .page-container {
-  padding-top: 150px;
+  padding-top: 130px;
   background-color: $f5-color;
   min-height: calc(100vh - 91px);
 }
@@ -3630,15 +3635,15 @@ button:focus {
   display: flex;
 
   .check-2-box {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 
     input:checked + label {
       border-color: $black-color;
     }
 
     &:not(:last-child) {
-      margin-right: 10px;
+      margin-right: 5px;
     }
 
     label {
@@ -3660,7 +3665,7 @@ button:focus {
 .item-color-info {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .reset-mobile-check {
@@ -4246,4 +4251,16 @@ button:focus {
     padding-top: 0;
     background-color: $eee-color;
   }
+}
+.mobile-color-change{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .edit-price-container button{
+    background-color: #e2e2e2;
+    &:hover{
+      background-color: $black-color;
+    }
+  }
+
 }
