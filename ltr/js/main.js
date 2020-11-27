@@ -374,7 +374,7 @@ $(document).ready(function () {
         var swiperAnimation = new SwiperAnimation();
         var swiper = new Swiper(".swiper-container", {
             autoplay: {
-                delay: 10000,
+                delay: 20000,
                 disableOnInteraction: false
             },
             spaceBetween: 30,
