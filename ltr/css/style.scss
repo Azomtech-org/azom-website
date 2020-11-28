@@ -1266,11 +1266,9 @@ footer {
 }
 
 .camera-size {
-  @include media-breakpoint-down(xl) {
-    font-size: 18px !important;
-  }
+
   @include media-breakpoint-down(lg) {
-    font-size: 20px !important;
+    font-size: 17px !important;
   }
 
   span {
@@ -1285,6 +1283,9 @@ footer {
       font-size: 13px;
       width: 81px;
       text-align: center;
+      @include media-breakpoint-down(lg){
+        font-size: 12px;
+      }
     }
   }
 }
@@ -2077,7 +2078,7 @@ footer {
   color: $black-color;
 
   &:hover {
-    color: $blue-primary;
+    color: #707070;
   }
 }
 
@@ -2647,13 +2648,13 @@ button:focus {
     font-size: 17px;
 
     &::placeholder, {
-      color: $black-color;
+      color: #949494;
       font-weight: 400;
     }
   }
 
   .bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:active, .bootstrap-select > .dropdown-toggle.bs-placeholder:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
-    color: $black-color;
+    color: #949494;
     font-weight: 400;
     font-size: 17px;
   }
@@ -4262,5 +4263,7 @@ button:focus {
       background-color: $black-color;
     }
   }
-
+}
+.buds-section .swiper-slide .slide1-buds-container .slide1-buds-title{
+  background-color: $eee-color;
 }
