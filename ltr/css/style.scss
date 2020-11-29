@@ -4272,3 +4272,16 @@ button:focus {
     font-size: 65%;
   }
 }
+.coupon-form{
+  button{
+    border-radius: 0 !important;
+    margin-top: 0;
+  }
+  input{
+    height: 52px !important;
+    background-color: $white;
+    @include media-breakpoint-down(lg){
+      height: 45px !important;
+    }
+  }
+}
