@@ -82,6 +82,53 @@ $letter-spacing: 2px;
   font-display: swap;;
 }
 
+//placeholder
+.placeholder-container {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  bottom: 0;
+
+  span {
+    position: absolute;
+    width: 250%;
+    height: 100vh;
+    z-index: 99;
+    left: -75%;
+    top: 0;
+    background-color: $black-color;
+  }
+
+  .placeholder {
+    position: absolute;
+    width: 250%;
+    height: 100vh;
+    z-index: 99999;
+    background-color: #fff;
+    left: -75%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 150px;
+      height: auto;
+      opacity: 1;
+      animation-name: arrow-animate;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+
 .bg-eee {
   background-color: $eee-color;
 }
@@ -4287,4 +4334,54 @@ button:focus {
 }
 .red{
   color: $red-color;
+}
+.pt-underHeader{
+  padding-top: 71px;
+}
+.sold-out-top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $black-color;
+  padding: 20px 15px;
+  text-align: center;
+  @include media-breakpoint-down(md){
+    left: auto;
+    right: 0;
+  }
+  h4{
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 900;
+    @include media-breakpoint-down(sm){
+      font-size: 19px;
+    }
+  }
+}
+.sold-out-section .slide1-img{
+  @include media-breakpoint-down(sm){
+    height: 300px;
+  }
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.slide1-buds-img-container{
+  position: relative;
+  img.img-2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.sold-out-section{
+  .slide-content{
+    @include media-breakpoint-down(md){
+      padding-right: 90px;
+    }
+  }
 }
