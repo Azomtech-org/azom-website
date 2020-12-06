@@ -242,3 +242,22 @@ header .navbar-dark .navbar-nav .nav-item.ar .nav-link{
     padding-left: 0;
   }
 }
+.sold-out-section .slide-content a.link-arrow{
+  opacity: 0;
+  transform: translateX(20px);
+}
+.sold-out-top{
+  right: 0;
+  left: auto;
+  @include media-breakpoint-down(md){
+    left: 0;
+    right: auto;
+  }
+  }
+
+@media (max-width: 991.98px) {
+  .sold-out-section .slide-content {
+    padding-right: 0;
+    padding-left: 90px;
+  }
+}
