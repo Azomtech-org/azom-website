@@ -9,7 +9,7 @@
 @import "scss/mixins/_breakpoints.scss";
 
 
-$black-color: #1A1818;
+$black-color: #000;
 $purple-color: #5750A2;
 $yellow-color: #FEC25F;
 $blue-color: #185ABC;
@@ -3917,7 +3917,7 @@ button:focus {
   padding-top: 71px;
   overflow: hidden;
   &.slide-1{
-    background-color: $f5-color;
+    background-color: $white;
 
   }
   &.slide-2{
@@ -4156,6 +4156,9 @@ button:focus {
   }
   p{
     font-size: 20px;
+    &.vta-hero{
+      font-size: 14px;
+    }
     @include media-breakpoint-down(md){
       font-size: 17px;
     }
@@ -4169,13 +4172,14 @@ button:focus {
   }
   .slide-price{
     font-weight: 700;
-    font-size: 28px;
+    font-size: 35px;
     @include media-breakpoint-down(md){
       font-size: 24px;
     }
     margin: 0;
     span{
       font-weight: 400;
+      font-size: 17px;
     }
   }
 }
@@ -4383,5 +4387,10 @@ button:focus {
     @include media-breakpoint-down(md){
       padding-right: 90px;
     }
+  }
+}
+.slider-img-after-pre{
+  img{
+    max-width: 100%;
   }
 }
