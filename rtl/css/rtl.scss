@@ -261,3 +261,11 @@ header .navbar-dark .navbar-nav .nav-item.ar .nav-link{
     padding-left: 90px;
   }
 }
+@include media-breakpoint-up(lg){
+  .azom-big{
+    font-size: 32px;
+    span{
+      font-size: 45px;
+    }
+  }
+}
