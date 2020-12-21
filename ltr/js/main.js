@@ -440,109 +440,109 @@ $(document).ready(function () {
     // sold out animation
 
 
-    let sold_out_mobile_img_slide = new TimelineMax({paused: true, yoyo: true, repeat: -1, repeatDelay: 0.5});
-    sold_out_mobile_img_slide.to('.sold-out-section .slide1-img .img-2', {
-        opacity: 0,
-        duration: 2,
-        ease: Expo.easeInOut,
-    }, -0.5);
-
-    let sold_out_bods_img_slide = new TimelineMax({paused: true, yoyo: true, repeat: -1, repeatDelay: 0.5});
-    sold_out_bods_img_slide.to('.sold-out-section .slide1-buds-img-container .img-2', {
-        opacity: 0,
-        duration: 2,
-        ease: Expo.easeInOut,
-    }, -0.5);
-
-    let sold_out_animation = new TimelineMax({paused: true});
-    sold_out_animation.from('.sold-out-top', {
-        opacity: 0,
-        duration: 1.5,
-        y: "-100%",
-        ease: Expo.easeInOut,
-    }, -0.4);
-    sold_out_animation.from('.sold-out-section .slide-content h3', {
-        opacity: 0,
-        duration: 1.5,
-        x: "-20px",
-        ease: Expo.easeInOut,
-    }, 0.4);
-    sold_out_animation.from('.sold-out-section .slide-content p', {
-        opacity: 0,
-        duration: 1.5,
-        x: "-20px",
-        ease: Expo.easeInOut,
-    }, 0.8);
-    sold_out_animation.from('.sold-out-section .slide-content a.link-arrow', {
-        opacity: 0,
-        duration: 1.5,
-        x: "-20px",
-        ease: Expo.easeInOut,
-    }, 0.6);
-    sold_out_animation.from('.sold-out-section .slide1-img', {
-        opacity: 0,
-        duration: 1.5,
-        ease: Expo.easeInOut,
-    }, 1);
-    sold_out_animation.from('.sold-out-section .slide1-buds-img', {
-        opacity: 0,
-        duration: 1.5,
-        ease: Expo.easeInOut,
-        onComplete: function () {
-            sold_out_mobile_img_slide.play();
-            sold_out_bods_img_slide.play();
-        }
-    }, 1.4);
-
-
-    if (!$(".placeholder-container").length && $(".sold-out-section").length) {
-        sold_out_animation.play()
-    }
+    // let sold_out_mobile_img_slide = new TimelineMax({paused: true, yoyo: true, repeat: -1, repeatDelay: 0.5});
+    // sold_out_mobile_img_slide.to('.sold-out-section .slide1-img .img-2', {
+    //     opacity: 0,
+    //     duration: 2,
+    //     ease: Expo.easeInOut,
+    // }, -0.5);
+    //
+    // let sold_out_bods_img_slide = new TimelineMax({paused: true, yoyo: true, repeat: -1, repeatDelay: 0.5});
+    // sold_out_bods_img_slide.to('.sold-out-section .slide1-buds-img-container .img-2', {
+    //     opacity: 0,
+    //     duration: 2,
+    //     ease: Expo.easeInOut,
+    // }, -0.5);
+    //
+    // let sold_out_animation = new TimelineMax({paused: true});
+    // sold_out_animation.from('.sold-out-top', {
+    //     opacity: 0,
+    //     duration: 1.5,
+    //     y: "-100%",
+    //     ease: Expo.easeInOut,
+    // }, -0.4);
+    // sold_out_animation.from('.sold-out-section .slide-content h3', {
+    //     opacity: 0,
+    //     duration: 1.5,
+    //     x: "-20px",
+    //     ease: Expo.easeInOut,
+    // }, 0.4);
+    // sold_out_animation.from('.sold-out-section .slide-content p', {
+    //     opacity: 0,
+    //     duration: 1.5,
+    //     x: "-20px",
+    //     ease: Expo.easeInOut,
+    // }, 0.8);
+    // sold_out_animation.from('.sold-out-section .slide-content a.link-arrow', {
+    //     opacity: 0,
+    //     duration: 1.5,
+    //     x: "-20px",
+    //     ease: Expo.easeInOut,
+    // }, 0.6);
+    // sold_out_animation.from('.sold-out-section .slide1-img', {
+    //     opacity: 0,
+    //     duration: 1.5,
+    //     ease: Expo.easeInOut,
+    // }, 1);
+    // sold_out_animation.from('.sold-out-section .slide1-buds-img', {
+    //     opacity: 0,
+    //     duration: 1.5,
+    //     ease: Expo.easeInOut,
+    //     onComplete: function () {
+    //         sold_out_mobile_img_slide.play();
+    //         sold_out_bods_img_slide.play();
+    //     }
+    // }, 1.4);
+    //
+    //
+    // if (!$(".placeholder-container").length && $(".sold-out-section").length) {
+    //     sold_out_animation.play()
+    // }
 
 
     //placeholder
-    if ($(".placeholder-container").length) {
-        $("body").addClass("overflow-hidden");
-        $(window).on('load', function () {
-            var t3 = new TimelineMax({paused: true});
-            t3.to('.placeholder-img', {
-                opacity: 0,
-                duration: 1.5,
-                y: "-120%",
-                delay: 0,
-                ease: Expo.easeInOut,
-            });
-            t3.to('.placeholder', {
-                duration: 1.5,
-                delay: -0.4,
-                // opacity:0.5,
-                BorderRadius: "50%",
-                y: "-100%",
-                ease: Power4.easeOut
-            });
-
-            t3.to('.placeholder-container span', 1, {
-                BorderRadius: "50%",
-                duration: 0.4,
-                delay: -0.7,
-                y: "-100%",
-                ease: Power4.easeOut,
-            });
-
-            var $t = $(".placeholder-container");
-            t3.to('.placeholder-container', {
-                display: "none",
-                delay: -0.7,
-                onComplete: function () {
-                    $("body").removeClass("overflow-hidden");
-                    if ($(".sold-out-section").length) {
-                        sold_out_animation.play();
-                    }
-                    $t.remove();
-
-                }
-            });
-            t3.play();
-        });
-    }
+    // if ($(".placeholder-container").length) {
+    //     $("body").addClass("overflow-hidden");
+    //     $(window).on('load', function () {
+    //         var t3 = new TimelineMax({paused: true});
+    //         t3.to('.placeholder-img', {
+    //             opacity: 0,
+    //             duration: 1.5,
+    //             y: "-120%",
+    //             delay: 0,
+    //             ease: Expo.easeInOut,
+    //         });
+    //         t3.to('.placeholder', {
+    //             duration: 1.5,
+    //             delay: -0.4,
+    //             // opacity:0.5,
+    //             BorderRadius: "50%",
+    //             y: "-100%",
+    //             ease: Power4.easeOut
+    //         });
+    //
+    //         t3.to('.placeholder-container span', 1, {
+    //             BorderRadius: "50%",
+    //             duration: 0.4,
+    //             delay: -0.7,
+    //             y: "-100%",
+    //             ease: Power4.easeOut,
+    //         });
+    //
+    //         var $t = $(".placeholder-container");
+    //         t3.to('.placeholder-container', {
+    //             display: "none",
+    //             delay: -0.7,
+    //             onComplete: function () {
+    //                 $("body").removeClass("overflow-hidden");
+    //                 if ($(".sold-out-section").length) {
+    //                     sold_out_animation.play();
+    //                 }
+    //                 $t.remove();
+    //
+    //             }
+    //         });
+    //         t3.play();
+    //     });
+    // }
 });
