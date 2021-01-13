@@ -4399,3 +4399,9 @@ button:focus {
   display: block;
   margin: 0 auto;
 }
+.container{
+  @include media-breakpoint-down(sm){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
