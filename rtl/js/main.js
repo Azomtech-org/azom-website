@@ -205,22 +205,29 @@ $(document).ready(function () {
 
     if ($(".mobile-check").length) {
         function check_if_mobile_checked() {
-            if ($("#blackPhone").is(':checked')) {
+            if ($("#blackPhone").is(":checked")) {
                 $(".black-buy-phone").addClass("active");
                 $(".mobile-black-color").removeClass("d-none");
             }
-            if (!$("#blackPhone").is(':checked')) {
+            if (!$("#blackPhone").is(":checked")) {
                 $(".black-buy-phone").removeClass("active");
                 $(".mobile-black-color").addClass("d-none");
             }
-            if ($("#whitePhone").is(':checked')) {
+            if ($("#whitePhone").is(":checked")) {
                 $(".white-buy-phone").addClass("active");
                 $(".mobile-white-color").removeClass("d-none");
             }
-            if (!$("#whitePhone").is(':checked')) {
+            if (!$("#whitePhone").is(":checked")) {
                 $(".white-buy-phone").removeClass("active");
                 $(".mobile-white-color").addClass("d-none");
-
+            }
+            if ($("#grayPhone").is(":checked")) {
+                $(".gray-buy-phone").addClass("active");
+                $(".mobile-gray-color").removeClass("d-none");
+            }
+            if (!$("#grayPhone").is(":checked")) {
+                $(".gray-buy-phone").removeClass("active");
+                $(".mobile-gray-color").addClass("d-none");
             }
         }
 
@@ -314,14 +321,30 @@ $(document).ready(function () {
     //     });
     // }
 //   Gsap start
-    gsap.config({nullTargetWarn: false});
+    gsap.config({ nullTargetWarn: false });
     gsap.registerPlugin(ScrollTrigger);
     const t1 = gsap.timeline();
     var arr1 = [0, 0, 100, 0, 100, 0, 0, 0];
-    if ($(".clep-scroll").length) {
-        t1.to('.clep-scroll', {
-            webkitClipPath: 'polygon(' + arr1[0] + '%' + arr1[1] + '%,' + arr1[2] + '%' + arr1[3] + '%,' + arr1[4] + '%' + arr1[5] + '%,' + arr1[6] + '%' + arr1[7] + '%)',
-            duration: 2,
+    if ($(".clep-container").length) {
+        t1.to(".clep-scroll", {
+            webkitClipPath:
+                "polygon(" +
+                arr1[0] +
+                "%" +
+                arr1[1] +
+                "%," +
+                arr1[2] +
+                "%" +
+                arr1[3] +
+                "%," +
+                arr1[4] +
+                "%" +
+                arr1[5] +
+                "%," +
+                arr1[6] +
+                "%" +
+                arr1[7] +
+                "%)",
         });
         ScrollTrigger.create({
             animation: t1,
@@ -329,7 +352,57 @@ $(document).ready(function () {
             start: "top",
             end: "100%",
             scrub: 1,
-            pin: true
+            pin: true,
+        });
+    }
+    const t2 = gsap.timeline();
+    if ($(".clep-container2").length) {
+        t2.to(".clep-scroll", {
+            webkitClipPath:
+                "polygon(" +
+                arr1[0] +
+                "%" +
+                arr1[1] +
+                "%," +
+                arr1[2] +
+                "%" +
+                arr1[3] +
+                "%," +
+                arr1[4] +
+                "%" +
+                arr1[5] +
+                "%," +
+                arr1[6] +
+                "%" +
+                arr1[7] +
+                "%)",
+        }).to(".clep-scroll-2", {
+            webkitClipPath:
+                "polygon(" +
+                arr1[0] +
+                "%" +
+                arr1[1] +
+                "%," +
+                arr1[2] +
+                "%" +
+                arr1[3] +
+                "%," +
+                arr1[4] +
+                "%" +
+                arr1[5] +
+                "%," +
+                arr1[6] +
+                "%" +
+                arr1[7] +
+                "%)",
+        });
+        ScrollTrigger.create({
+            animation: t2,
+            trigger: ".clep-container2",
+            start: "top",
+            end: "200%",
+            scrub: 1,
+            pin: true,
         });
     }
 

@@ -1111,24 +1111,26 @@ footer {
   }
 }
 
-.clep-scroll {
+.clep-scroll,.clep-scroll-2 {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.clep-container {
+.clep-container,.clep-container2 {
   //margin-top: -90px !important;
   position: relative;
   height: calc(100vh);
 
-  .clep-scroll {
+  .clep-scroll,.clep-scroll-2 {
     position: absolute;
     left: 0;
     width: 100%;
     bottom: 0;
     height: 100%;
-    z-index: 11;
+    z-index: 12;
   }
-
+  .clep-scroll-2{
+    z-index: 11!important;
+  }
   .no-clip {
     position: absolute;
     left: 0;
@@ -1766,6 +1768,9 @@ footer {
     font-weight: 700;
     @include media-breakpoint-down(lg) {
       margin-top: 40px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 28px;
     }
   }
 
@@ -4138,13 +4143,19 @@ button:focus {
 }
 .azom-big{
   font-size: 45px;
-  @include media-breakpoint-down(md){
+  @include media-breakpoint-down(xl){
+    font-size: 37px;
+  }
+  @include media-breakpoint-down(sm){
     font-size: 30px;
   }
   span{
     font-size: 60px;
     padding-right: 20px;
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(xl){
+      font-size: 46px;
+    }
+    @include media-breakpoint-down(sm){
       font-size: 35px;
       padding-right: 5px;
     }
@@ -4153,6 +4164,9 @@ button:focus {
 .slide-content{
   @include media-breakpoint-down(md){
     margin-top: 20px;
+  }
+  @include media-breakpoint-down(lg){
+    text-align: center;
   }
   p{
     font-size: 20px;
@@ -4403,5 +4417,18 @@ button:focus {
   @include media-breakpoint-down(sm){
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+.bg-gray{
+  background-color: #A4A4A5 !important;
+  .hero-section{
+    background-color:  #A4A4A5 !important;
+
+    .desert-hero-image-container{
+      color: #5B5B5B ;
+    }
+    .hero-big-content{
+      color: #5B5B5B
+    }
   }
 }
