@@ -4017,6 +4017,25 @@ button:focus {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft
 }
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -70px, 0);
+    transform: translate3d(0, -70px, 0)
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+.animate__fadeInTop {
+  -webkit-animation-name: fadeInTop;
+  animation-name: fadeInTop
+}
+
 .slide1-img{
   position: relative;
   text-align: center;
@@ -4430,5 +4449,39 @@ button:focus {
     .hero-big-content{
       color: #5B5B5B
     }
+  }
+}
+.gray-phone-slide{
+  background-color:  #A4A4A5 !important;
+}
+.slider-img-gray-phone{
+  margin: 0 auto;
+  @include media-breakpoint-up(md){
+    width: 45%;
+  }
+  @include media-breakpoint-down(md){
+    margin-top:30px;
+    width: 80%;
+  }
+}
+.top-box-gary-phone{
+  padding: 20px 5px 10px 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  color: $black-color;
+  text-align: center;
+
+  h3{
+    font-weight: 900;
+    margin-bottom: 0;
+  }
+  p{
+    font-weight: 900;
+    margin: 0;
+  }
+  @include media-breakpoint-down(md){
+    display: none;
   }
 }
