@@ -2,51 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bebb35c-5f58-4eca-99a0-90f9dfda5c56" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buds.html" beforeDir="false" afterPath="$PROJECT_DIR$/buds.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/desert2.html" beforeDir="false" afterPath="$PROJECT_DIR$/desert2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pay-desert.html" beforeDir="false" afterPath="$PROJECT_DIR$/pay-desert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/activate-warranty.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/activate-warranty.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/azom-app.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/azom-app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/azom-care.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/azom-care.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/buds.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/buds.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/campaign-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/campaign-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/change-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/change-password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/css/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/css/rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/pay.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rtl/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rtl/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rtl/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/debug.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/desert2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/desert2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/error-pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/error-pay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/faq.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/forgot-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/forgot-password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/ibrahim-ui.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/ibrahim-ui.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/images/buds-box.png" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/images/buds-box.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rtl/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/js/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/js/main.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/my-cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/my-cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/my-orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/my-orders.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/notification.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/notification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/order-summry.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/order-summry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/pay-desert.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/pay-desert.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rtl/pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/pay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/privacy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/profile2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/profile2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/sign-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/sign-in.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/sign-up.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/success-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/success-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/terms-and-conditions.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/terms-and-conditions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rtl/verify-account.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rtl/verify-account.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +37,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4bebb35c-5f58-4eca-99a0-90f9dfda5c56" name="Default Changelist" comment="" />
@@ -79,8 +46,12 @@
       <option name="presentableId" value="Default" />
       <updated>1612997808130</updated>
       <workItem from="1612997810411" duration="4000" />
+      <workItem from="1614178840912" duration="10710000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -92,5 +63,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

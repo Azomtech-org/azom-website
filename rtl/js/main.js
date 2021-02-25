@@ -623,4 +623,43 @@ $(document).ready(function () {
     //         t3.play();
     //     });
     // }
+    if($("#pay-btn").length){
+        $("#pay-btn").on("click", function (){
+            $("#pay_form").parsley().validate();
+            if ($("#pay_form").parsley().isValid()){
+                $("#phoneConfirmation").modal('show');
+            }
+        });
+        let elem = $('#resend-btn');
+        let resendCode = function () {
+            let timeLeft = 60;
+
+            let timerId = setInterval(countdown, 1000);
+
+            function countdown() {
+                if (timeLeft === -1) {
+                    clearTimeout(timerId);
+                    doSomething();
+                } else {
+                    elem.find('span span').html(timeLeft+'s');
+                    timeLeft--;
+                }
+            }
+
+            function doSomething() {
+                elem.removeAttr('disabled');
+                elem.find('span').addClass("d-none");
+            }
+        }
+
+        elem.on("click", function (){
+            $(this).attr("disabled", true);
+            $(this).find('span').removeClass("d-none");
+            resendCode();
+        })
+
+        $('#phoneConfirmation').on('shown.bs.modal', function (e) {
+            resendCode();
+        })
+    }
 });

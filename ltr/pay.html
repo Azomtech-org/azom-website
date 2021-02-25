@@ -92,7 +92,7 @@
     </nav>
 </header>
 <div class="page-container">
-    <form action="#" data-parsley-validate="" novalidate="" class="on-change">
+    <form id="pay_form" action="#" data-parsley-validate="" novalidate="" class="on-change">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-auto">
@@ -111,15 +111,15 @@
                         </h3>
                     </div>
                 </div>
-                <div class="col-auto">
-                    <div class="custom-control custom-checkbox different-address-check-container">
-                        <input type="checkbox" class="custom-control-input" id="different_address">
-                        <label class="custom-control-label" for="different_address">Ship to a different address?</label>
-                    </div>
-                </div>
+                <!--                <div class="col-auto">-->
+                <!--                    <div class="custom-control custom-checkbox different-address-check-container">-->
+                <!--                        <input type="checkbox" class="custom-control-input" id="different_address">-->
+                <!--                        <label class="custom-control-label" for="different_address">Ship to a different address?</label>-->
+                <!--                    </div>-->
+                <!--                </div>-->
             </div>
         </div>
-        <div class="section pt-4 form-slide-down pay-form">
+        <div class="section pt-4  pay-form">
             <div class="container">
                 <div class="form">
                     <div class="input-container">
@@ -181,21 +181,37 @@
                     </div>
                     <div class="input-container">
                         <div class="row align-items-center">
-                            <div class="col-md-6">
-                                <input id="mobile" type="number" placeholder="Phone">
-                            </div>
-                            <div class="col-md-6">
-                                <input id="email" type="email" placeholder="Email address">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-container">
-                        <div class="row align-items-center">
                             <div class="col-md-12">
                                 <textarea placeholder="Order notes (optional)" rows="4"></textarea>
                             </div>
                         </div>
                     </div>
+                    <!--                    <div class="sub-page-title2 text-left mt-3">-->
+                    <!--                        <h3 class="mb-0 text-uppercase mb-3">-->
+                    <!--                            Mobile Number Activation-->
+                    <!--                        </h3>-->
+                    <!--                        <div class="row">-->
+                    <!--                            <div class="col-lg-6">-->
+                    <!--                                <div class="input-container">-->
+                    <!--                                    <div class="input-group">-->
+                    <!--                                        <div class="input-group-prepend">-->
+                    <!--                                            <span class="input-group-text" id="basic-addon1">+966</span>-->
+                    <!--                                        </div>-->
+
+                    <!--                                        <input type="number" id="mobile" name="mobile" class="form-control "-->
+                    <!--                                               placeholder="501234567" required="" maxlength="9" minlength="9"-->
+                    <!--                                               data-parsley-length-message="Wrong mobile number"-->
+                    <!--                                               data-parsley-required-message="Enter your mobile number"-->
+                    <!--                                               data-parsley-type="number">-->
+
+                    <!--                                        <button class="input-group-append send-mobile-btn text-uppercase modal-btn" type="button" data-toggle="modal" data-target="#phoneConfirmation">-->
+                    <!--                                            Send Code-->
+                    <!--                                        </button>-->
+                    <!--                                    </div>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -310,7 +326,7 @@
                             </label>
 
                         </div>
-                        <button type="submit" class="black-btn fw-900 lg-btn pay-btn-2 text-center w-100">
+                        <button type="button" id="pay-btn" class="black-btn fw-900 lg-btn pay-btn-2 text-center w-100">
                             <img src="images/icon/card.svg" alt="">
                             <span>
                             PAY
@@ -365,6 +381,58 @@
         </div>
     </div>
 </footer>
+
+<!-- Modal -->
+<div class="modal fade pay-form" id="phoneConfirmation" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form data-parsley-validate="" novalidate="" class="on-change">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Verify Your Mobile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body form">
+                    <div class="input-container">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon3">+966</span>
+                            </div>
+
+                            <input type="number" id="mobile2" name="mobile" class="form-control "
+                                   placeholder="501234567" required="" maxlength="9" minlength="9"
+                                   data-parsley-length-message="Wrong mobile number"
+                                   data-parsley-required-message="Enter your mobile number" data-parsley-type="number">
+                            <div id="resendCode">
+
+                            </div>
+                            <button class="input-group-append send-mobile-btn text-uppercase modal-btn" id="resend-btn"
+                                    disabled type="button">
+                                Resend Code <span> (<span>60s</span>)</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="input-container mb-3">
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <label for="confirmCode" class="small-label text-capitalize">
+                                    We've sent the verification code to your mobile, please type it here
+                                </label>
+                                <input id="confirmCode" type="text" placeholder="XXXXX" data-parsley-required=""
+                                       data-parsley-required-message="Enter Your Verification Code">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="green-btn w-100">Verify</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
 
 <script src="js/jquery-3.4.1.js"></script>
 <script src="js/popper.min.js"></script>

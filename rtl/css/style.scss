@@ -183,12 +183,25 @@ $letter-spacing: 2px;
   @extend %my-btn;
   background-color: $green-color;
   color: $white;
+
+  &:hover{
+    background-color: darken($green-color, 5%);
+    color: $white;
+    border-color: $green-color;
+  }
 }
 
 .green-btn {
   @extend %green-btn;
-}
 
+
+}
+.send-mobile-btn:disabled {
+  background-color: #989898 !important;
+  &:hover{
+    background-color: #989898 !important;
+  }
+}
 %blue-btn {
   @extend %my-btn;
   background-color: $blue-primary;
@@ -2672,6 +2685,9 @@ button:focus {
   h3 {
     color: $light-black;
     font-weight: 700;
+    @include media-breakpoint-down(md){
+      font-size: 20px;
+    }
   }
 }
 
@@ -4461,6 +4477,7 @@ button:focus {
   }
   @include media-breakpoint-down(md){
     margin-top:30px;
+    width: 80%;
   }
 }
 .top-box-gary-phone{
@@ -4483,4 +4500,47 @@ button:focus {
   @include media-breakpoint-down(md){
     display: none;
   }
+}
+.send-mobile-btn{
+  background-color: $green-color;
+  color: #fff;
+  text-transform: capitalize !important;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all ease-in-out 0.3s;
+  @include media-breakpoint-down(sm){
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 15px;
+  }
+  &:hover{
+    background-color: darken($green-color, 5%);
+  }
+}
+.modal-content{
+  border-radius: 0;
+  border: 0;
+}
+.btn{
+  border: 0;
+  border-radius: 0;
+  &.btn-success{
+    background-color: $green-color;
+    &:hover{
+      background-color: darken($green-color, 5%);
+    }
+  }
+}
+.small-label{
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
+button{
+  cursor: pointer;
 }
