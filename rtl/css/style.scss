@@ -682,7 +682,8 @@ header {
     a.close-search {
       position: absolute;
       left: 0;
-      top: 0;
+      top: 50%;
+      transform: translateY(-50%);
       z-index: 9;
       padding: 5px;
       font-size: 20px;
@@ -1458,7 +1459,7 @@ footer {
   }
 
   h3 {
-    font-size: 5vw;
+    font-size: 3.5vw;
     text-transform: uppercase;
     font-weight: 900;
   }
@@ -1473,7 +1474,7 @@ footer {
 
   h4 {
     font-weight: 900;
-    font-size: 4vw;
+    font-size: 3vw;
     text-transform: uppercase;
     margin-top: 25px;
     @include media-breakpoint-down(lg) {
@@ -1640,7 +1641,7 @@ footer {
   color: $black-color;
 
   h3 {
-    font-size: 5vw;
+    font-size: 3vw;
     font-weight: 900;
     text-transform: uppercase;
     @include media-breakpoint-down(sm) {
@@ -4543,4 +4544,7 @@ button:focus {
 }
 button{
   cursor: pointer;
+}
+.ltr-dir{
+  direction: ltr !important;
 }
