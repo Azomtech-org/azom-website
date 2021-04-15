@@ -136,7 +136,7 @@ $(document).ready(function () {
     $("#customFile").on("change", function () {
       //get the file name
       var fileName = $(this).val();
-      var label = $(this).next(".custom-file-label");
+      var label = $(this).parent().find(".custom-file-label");
       //replace the "Choose a file" label
       label.html(fileName);
       label.addClass("file-has-change");
