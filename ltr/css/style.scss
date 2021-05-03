@@ -847,6 +847,16 @@ header {
   .home-hero-content {
     color: $black-color;
   }
+  img{
+    @include media-breakpoint-down(lg){
+      max-width: 70%;
+      margin: 0 auto;
+      display: block;
+    }
+    @include media-breakpoint-down(sm){
+      max-width: 90%;
+    }
+  }
 }
 
 .plyr__poster {
@@ -919,6 +929,9 @@ header {
 
   img {
     max-height: 130px;
+    @include media-breakpoint-down(md){
+      max-height: 90px;
+    }
   }
 
   a {
@@ -1096,11 +1109,15 @@ header {
 }
 
 .our-social {
-  gap: 15px;
-
+  @include media-breakpoint-down(sm){
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   & > div {
     flex-grow: 1;
-
+    @include media-breakpoint-down(sm){
+      flex-grow: 0;
+    }
   }
 
   a {
@@ -1135,8 +1152,7 @@ footer {
       }
 
       &:hover {
-        color: $blue-primary;
-
+        color: $gray-text-color;
       }
     }
 
@@ -4294,7 +4310,7 @@ button:focus {
 
   span {
     font-size: 60px;
-    padding-right: 20px;
+    padding-right: 8px;
     @include media-breakpoint-down(xl) {
       font-size: 46px;
     }
@@ -4871,10 +4887,10 @@ button {
   }
 }
 .condition-list.style2{
-    li{
-      font-size: 16px;
-      margin-bottom: 0 !important;
-    }
+  li{
+    font-size: 16px;
+    margin-bottom: 0 !important;
+  }
 }
 label.label-style2{
   font-weight: 500 ;
@@ -4896,3 +4912,25 @@ label.label-style2{
     font-size: 16px;
   }
 }
+
+  .link-effect-4  {
+    color: $gray-text-color;
+    text-shadow: none;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      max-height: 0;
+      // border-bottom: 2px solid #fff;
+      color: $black-color;
+      content: attr(data-hover);
+      transition: max-height 0.6s;
+    }
+    &:hover{
+      &::before{
+        max-height: 100%;
+      }
+    }
+  }

@@ -847,6 +847,16 @@ header {
   .home-hero-content {
     color: $black-color;
   }
+  img{
+    @include media-breakpoint-down(lg){
+      max-width: 70%;
+      margin: 0 auto;
+      display: block;
+    }
+    @include media-breakpoint-down(sm){
+      max-width: 90%;
+    }
+  }
 }
 
 .plyr__poster {
@@ -919,6 +929,9 @@ header {
 
   img {
     max-height: 130px;
+    @include media-breakpoint-down(md){
+      max-height: 90px;
+    }
   }
 
   a {
@@ -1096,11 +1109,15 @@ header {
 }
 
 .our-social {
-  gap: 15px;
-
+  @include media-breakpoint-down(sm){
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   & > div {
     flex-grow: 1;
-
+    @include media-breakpoint-down(sm){
+      flex-grow: 0;
+    }
   }
 
   a {
@@ -4294,7 +4311,7 @@ button:focus {
 
   span {
     font-size: 60px;
-    padding-right: 20px;
+    padding-right: 8px;
     @include media-breakpoint-down(xl) {
       font-size: 46px;
     }
