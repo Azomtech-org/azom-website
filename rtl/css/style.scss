@@ -1152,8 +1152,7 @@ footer {
       }
 
       &:hover {
-        color: $blue-primary;
-
+        color: $gray-text-color;
       }
     }
 
@@ -1248,6 +1247,9 @@ footer {
   right: 0;
   top: 100%;
   transform: translateY(-50%);
+  @media only screen and (min-width: 1500px) {
+    transform: translateY(-70%);
+  }
   @include media-breakpoint-down(lg) {
     transform: translateY(-60%);
   }
@@ -1311,7 +1313,10 @@ footer {
   }
 
   .desert-hero-image-container {
-    transform: translateY(-62%);
+    transform: translateY(-70%);
+    @media only screen and (min-width: 1500px) {
+      transform: translateY(-125%);
+    }
     @include media-breakpoint-down(md) {
       transform: translateY(-111%);
     }
@@ -1714,12 +1719,14 @@ footer {
 
 .left-box-details {
   margin-top: 20px;
+  font-size: 20px;
   @include media-breakpoint-up(lg) {
     margin-top: 80px;
   }
   @include media-breakpoint-down(sm) {
     padding-left: 10px;
     padding-right: 10px;
+    font-size: 15px;
   }
 
   .row {
@@ -3391,8 +3398,6 @@ button:focus {
   }
 
   .v-camera-details {
-    text-align: center;
-
     h3 {
       position: relative;
       display: inline-block;
@@ -3465,16 +3470,18 @@ button:focus {
 
   h4 {
     font-weight: 900;
-    font-size: 50px;
+    font-size: 32px;
     @include media-breakpoint-down(sm) {
-      font-size: 30px;
+      font-size: 20px;
     }
   }
 
   p {
     font-size: 20px;
+    margin-top: 40px;
     @include media-breakpoint-down(sm) {
       font-size: 16px;
+      margin-top: 15px;
     }
   }
 
@@ -4912,4 +4919,7 @@ label.label-style2{
   @include media-breakpoint-down(sm) {
     font-size: 16px;
   }
+}
+.c-details-list{
+  font-size: 14px;
 }

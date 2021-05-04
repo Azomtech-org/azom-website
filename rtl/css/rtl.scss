@@ -359,3 +359,7 @@ header .navbar-dark .navbar-nav .nav-item.ar .nav-link {
     margin-left: -55px;
   }
 }
+.v-camera-card .v-camera-details h3 span {
+  left: auto;
+  right:  calc(100% + 3px);
+}
