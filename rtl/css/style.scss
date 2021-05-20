@@ -1247,9 +1247,6 @@ footer {
   right: 0;
   top: 100%;
   transform: translateY(-50%);
-  @media only screen and (min-width: 1500px) {
-    transform: translateY(-70%);
-  }
   @include media-breakpoint-down(lg) {
     transform: translateY(-60%);
   }
@@ -1274,6 +1271,7 @@ footer {
     font-size: 25px;
     padding-left: 60px;
     margin-top: 15px;
+    text-transform: uppercase;
     @include media-breakpoint-down(md) {
       font-size: 20px;
     }
@@ -1315,7 +1313,7 @@ footer {
   .desert-hero-image-container {
     transform: translateY(-70%);
     @media only screen and (min-width: 1500px) {
-      transform: translateY(-125%);
+      transform: translateY(-110%);
     }
     @include media-breakpoint-down(md) {
       transform: translateY(-111%);
