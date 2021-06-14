@@ -194,15 +194,17 @@ $letter-spacing: 2px;
 .green-btn {
   @extend %green-btn;
 }
-.linkenIn-btn{
-  img{
+
+.linkenIn-btn {
+  img {
     height: 30px;
     width: auto;
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       height: 26px;
     }
   }
 }
+
 .send-mobile-btn:disabled {
   background-color: #989898 !important;
 
@@ -362,6 +364,7 @@ $letter-spacing: 2px;
     color: $white;
   }
 }
+
 .gray-btn {
   @extend %my-btn;
   background: $light-black;
@@ -847,13 +850,14 @@ header {
   .home-hero-content {
     color: $black-color;
   }
-  img{
-    @include media-breakpoint-down(lg){
+
+  img {
+    @include media-breakpoint-down(lg) {
       max-width: 70%;
       margin: 0 auto;
       display: block;
     }
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       max-width: 90%;
     }
   }
@@ -929,7 +933,7 @@ header {
 
   img {
     max-height: 130px;
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       max-height: 90px;
     }
   }
@@ -1109,13 +1113,14 @@ header {
 }
 
 .our-social {
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     flex-wrap: wrap;
     justify-content: center;
   }
+
   & > div {
     flex-grow: 1;
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       flex-grow: 0;
     }
   }
@@ -1834,7 +1839,7 @@ footer {
   padding-top: 130px;
   background-color: $f5-color;
   min-height: calc(100vh - 91px);
-  @include media-breakpoint-down(lg){
+  @include media-breakpoint-down(lg) {
     padding-top: 100px;
   }
 }
@@ -4744,19 +4749,34 @@ button {
   margin-bottom: 30px;
   background-color: $eee-color;
   padding: 30px 40px;
+
+  &.job-details-card {
+    padding: 40px 40px;
+    @include media-breakpoint-down(sm) {
+      padding: 20px 20px;
+    }
+  }
+
   @include media-breakpoint-down(sm) {
     padding: 15px 20px;
   }
 
   .l-update {
     color: #5B5B5B;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 10px !important;
+    }
+  }
+
+  .title4 {
+    direction: ltr;
   }
 
   .available-box {
     width: 200px;
     text-align: center;
     height: 40px;
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       height: 32px;
     }
     display: flex;
@@ -4778,22 +4798,28 @@ button {
       }
     }
   }
-  &.active{
+
+  &.active {
     background-color: $white;
-    .available-box{
+
+    .available-box {
       background-color: $green-color;
-      h4{
+
+      h4 {
         font-weight: 700;
         font-size: 26px;
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-down(md) {
           font-size: 20px;
         }
       }
     }
   }
-  &.job-details-card{
-    .jobs-card-date{
-      margin: 0;
+
+  &.job-details-card {
+    .jobs-card-date {
+      @include media-breakpoint-up(lg) {
+        margin: 0;
+      }
     }
   }
 }
@@ -4816,6 +4842,7 @@ button {
   }
 
   p {
+    direction: ltr;
     font-size: 18px;
     @include media-breakpoint-down(md) {
       margin-bottom: 10px;
@@ -4885,29 +4912,34 @@ button {
     font-size: 20px;
   }
 }
-.title5{
+
+.title5 {
   font-size: 20px;
   @extend %ellipsis;
   @include media-breakpoint-down(sm) {
     font-size: 17px;
   }
 }
-.condition-list.style2{
-  li{
+
+.condition-list.style2 {
+  li {
     font-size: 16px;
     margin-bottom: 0 !important;
   }
 }
-label.label-style2{
-  font-weight: 500 ;
+
+label.label-style2 {
+  font-weight: 500;
   font-size: 17px;
   cursor: pointer;
 }
-.custom-control{
+
+.custom-control {
   padding-left: 1rem;
   margin-left: 0.5rem;
 }
-.custom-file .custom-file-input ,.custom-file {
+
+.custom-file .custom-file-input, .custom-file {
   height: 51px;
 }
 
@@ -4918,62 +4950,73 @@ label.label-style2{
     font-size: 16px;
   }
 }
-.c-details-list{
+
+.c-details-list {
   font-size: 14px;
 }
-.noti-date{
+
+.noti-date {
   color: #b7b7b7;
   font-size: 14px;
-  svg{
+
+  svg {
     width: 18px;
     height: auto;
   }
 }
-.noti-type{
+
+.noti-type {
   padding: 1px 10px;
   border-radius: 5px;
   font-size: 15px;
 }
-.type1{
+
+.type1 {
   color: #fff;
   background-color: #b4b4b4;
 }
-.type2{
+
+.type2 {
   color: #fff;
   background-color: #747474;
 }
-.type3{
+
+.type3 {
   color: #fff;
   background-color: #333;
 }
-.notification-container{
-  .noti-card{
-    &:not(:last-child){
+
+.notification-container {
+  .noti-card {
+    &:not(:last-child) {
       border-bottom: 2px solid #f5f5f5;
     }
+
     background-color: #fff;
     padding: 20px;
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       padding: 10px;
     }
-    h3{
+
+    h3 {
       font-size: 20px;
       margin-bottom: 4px;
-      @include media-breakpoint-down(md){
+      @include media-breakpoint-down(md) {
         font-size: 17px;
       }
     }
-    p.noti-details{
+
+    p.noti-details {
       margin: 0;
       color: #333;
-      @include media-breakpoint-down(md){
+      @include media-breakpoint-down(md) {
         font-size: 15px;
       }
     }
   }
 }
 
-.del-noti{
+.del-noti {
   border: 0;
   background: #dedede;
   border-radius: 5px;
@@ -4982,18 +5025,21 @@ label.label-style2{
   justify-content: center;
   height: 26px;
   width: 26px;
-  @include media-breakpoint-down(lg){
+  @include media-breakpoint-down(lg) {
     width: 24px;
     height: 24px;
   }
   transition: all ease-in-out 0.3s;
-  &:hover{
+
+  &:hover {
     background: $red-color;
   }
-  svg{
+
+  svg {
     width: 15px;
     height: 20px;
-    path{
+
+    path {
       fill: #fff;
     }
   }
