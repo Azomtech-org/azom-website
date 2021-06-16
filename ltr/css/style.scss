@@ -182,11 +182,11 @@ $letter-spacing: 2px;
 %green-btn {
   @extend %my-btn;
   background-color: $green-color;
-  color: $white;
+  color: $white !important;
 
   &:hover {
     background-color: darken($green-color, 5%);
-    color: $white;
+    color: $white !important;
     border-color: $green-color;
   }
 }
