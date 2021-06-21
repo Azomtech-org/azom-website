@@ -3092,10 +3092,10 @@ button:focus {
 }
 
 .profile-card {
-  padding: 40px 0 0 40px;
-  @include media-breakpoint-down(sm) {
-    padding: 25px 25px 0 25px;
-  }
+  //padding: 40px 0 0 40px;
+  //@include media-breakpoint-down(sm) {
+  //  padding: 25px 25px 0 25px;
+  //}
 
   h3 {
     font-weight: 900;
