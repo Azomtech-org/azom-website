@@ -218,7 +218,7 @@ header .navbar-dark .navbar-nav .nav-item.ar .nav-link {
 
 @media (min-width: 992px) {
   .social-section .big-title-1 {
-    font-size: 31px;
+    font-size: 30px;
   }
 }
 
@@ -344,4 +344,8 @@ header .navbar-dark .navbar-nav .nav-item.ar .nav-link {
 .v-camera-card .v-camera-details h3 span {
   left: auto;
   right: calc(100% + 3px);
+}
+
+.social-section .big-btn {
+  margin-top: -8px;
 }

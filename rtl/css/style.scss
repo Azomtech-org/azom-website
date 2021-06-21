@@ -3716,11 +3716,17 @@ button:focus {
 
   a {
     border: 0 !important;
-
+    margin-top: 0;
     &:hover {
       background-color: transparent;
     }
   }
+  .big-btn{
+    height: 50px !important;
+  }
+  //.big-btn.black-outline-btn:after{
+  //  bottom: -10px;
+  //}
 }
 
 .drop-container {
