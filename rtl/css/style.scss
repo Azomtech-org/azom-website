@@ -4812,10 +4812,10 @@ button {
       background-color: $green-color;
 
       h4 {
-        font-weight: 700;
-        font-size: 26px;
+        font-weight: 400;
+        font-size: 18px;
         @include media-breakpoint-down(md) {
-          font-size: 20px;
+          font-size: 16px;
         }
       }
     }
