@@ -37,12 +37,17 @@ $(document).ready(function () {
     });
   }
 
-  $(".close-search").on("click", function () {
-    $(".header-search").fadeOut(200);
-  });
+
+  //new search
   $(".header-search-button").on("click", function () {
-    $(".header-search").slideToggle(200);
+    // $(".header-search").slideToggle(200);
+    $(this).closest('header').addClass("search-is-active");
   });
+
+  $(".close-search").on('click', function () {
+    $(this).closest("header").removeClass("search-is-active");
+  });
+  //new search end
 
   if ($("#different_address").length) {
     $("#different_address").change(function () {

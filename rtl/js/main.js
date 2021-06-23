@@ -5,24 +5,24 @@ $(document).ready(function () {
             speed: {selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]},
             quality: {default: 480, options: [1080, 720, 480, 360]}
         });
-        player.on('play', function() {
+        player.on('play', function () {
             $('.video-section h3').fadeOut(500);
         });
-        player.on('pause', function() {
+        player.on('pause', function () {
             $('.video-section h3').fadeIn(500);
         });
 
         //VIDEO START / STOP
-        player.on('ready', function() {
+        player.on('ready', function () {
             ScrollTrigger.create({
                 trigger: ".video-section",
-                onToggle: function(self) {
+                onToggle: function (self) {
                     if (self.isActive) {
                         var promise = player.play();
                         if (promise !== undefined) {
-                            promise.then(function()  {
+                            promise.then(function () {
                                 player.play();
-                            }).catch(function()  {
+                            }).catch(function () {
                                 console.log("");
                             });
                         }
@@ -38,13 +38,17 @@ $(document).ready(function () {
 
     }
 
+    //new search
+    $(".header-search-button").on("click", function () {
+        // $(".header-search").slideToggle(200);
+        $(this).closest('header').addClass("search-is-active");
+    });
 
     $(".close-search").on('click', function () {
-        $('.header-search').fadeOut(200)
+        $(this).closest("header").removeClass("search-is-active");
     });
-    $(".header-search-button").on('click', function () {
-        $('.header-search').slideToggle(200)
-    });
+    //new search end
+
 
     if ($('#different_address').length) {
         $('#different_address').change(function () {
@@ -108,7 +112,7 @@ $(document).ready(function () {
             "showDropdowns": true,
             "minYear": 1940,
             "maxYear": 2020,
-            opens:"left",
+            opens: "left",
             "autoApply": true,
             "linkedCalendars": false,
             "showCustomRangeLabel": false,
@@ -126,7 +130,7 @@ $(document).ready(function () {
             "showDropdowns": true,
             "minYear": 1940,
             "maxYear": 2020,
-            opens:"left",
+            opens: "left",
             "autoApply": true,
             "linkedCalendars": false,
             "showCustomRangeLabel": false,
@@ -321,7 +325,7 @@ $(document).ready(function () {
     //     });
     // }
 //   Gsap start
-    gsap.config({ nullTargetWarn: false });
+    gsap.config({nullTargetWarn: false});
     gsap.registerPlugin(ScrollTrigger);
     const t1 = gsap.timeline();
     var arr1 = [0, 0, 100, 0, 100, 0, 0, 0];
@@ -571,8 +575,6 @@ $(document).ready(function () {
     // }, 1.4);
 
 
-
-
     // if (!$(".placeholder-container").length && $(".sold-out-section").length) {
     //     sold_out_animation.play()
     // }
@@ -623,10 +625,10 @@ $(document).ready(function () {
     //         t3.play();
     //     });
     // }
-    if($("#pay-btn").length){
-        $("#pay-btn").on("click", function (){
+    if ($("#pay-btn").length) {
+        $("#pay-btn").on("click", function () {
             $("#pay_form").parsley().validate();
-            if ($("#pay_form").parsley().isValid()){
+            if ($("#pay_form").parsley().isValid()) {
                 $("#phoneConfirmation").modal('show');
             }
         });
@@ -641,7 +643,7 @@ $(document).ready(function () {
                     clearTimeout(timerId);
                     doSomething();
                 } else {
-                    elem.find('span span').html(timeLeft+'s');
+                    elem.find('span span').html(timeLeft + 's');
                     timeLeft--;
                 }
             }
@@ -652,7 +654,7 @@ $(document).ready(function () {
             }
         }
 
-        elem.on("click", function (){
+        elem.on("click", function () {
             $(this).attr("disabled", true);
             $(this).find('span').removeClass("d-none");
             resendCode();
