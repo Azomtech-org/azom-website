@@ -370,3 +370,20 @@ header .header-search a.close-search{
   right: auto;
   left: 2%;
 }
+.card-1 h3{
+  text-align: left;
+}
+.card-1 h3 span.vta{
+  bottom: -11px !important;
+}
+@media screen and (max-width: 800px) {
+  .table-mobile table td {
+    text-align: left;
+  }
+  .table-mobile table td:before{
+    float: right;
+  }
+  .table-mobile.cart-table.order-table table tr:last-child td:last-child{
+    border-right: 1px solid #707070;
+  }
+}

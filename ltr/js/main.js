@@ -510,6 +510,12 @@ $(document).ready(function () {
     });
   }
 
+  $("header .navbar-collapse").on('shown.bs.collapse', function(){
+    $("body").addClass("menu-is-open")
+  });
+  $("header .navbar-collapse").on('hide.bs.collapse', function(){
+    $("body").removeClass("menu-is-open")
+  });
   // sold out animation
 
   // let sold_out_mobile_img_slide = new TimelineMax({paused: true, yoyo: true, repeat: -1, repeatDelay: 0.5});

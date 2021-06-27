@@ -510,12 +510,16 @@ $(document).ready(function () {
                 transitionEnd: function () {
                     $(".swiper-progress-bar").eq(0).addClass("animate");
                 }
-
-
             }
         });
     }
 
+    $("header .navbar-collapse").on('shown.bs.collapse', function(){
+        $("body").addClass("menu-is-open")
+    });
+    $("header .navbar-collapse").on('hide.bs.collapse', function(){
+        $("body").removeClass("menu-is-open")
+    });
     // sold out animation
 
     //

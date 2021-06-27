@@ -565,6 +565,9 @@ $letter-spacing: 2px;
 }
 
 body {
+  &.menu-is-open{
+    overflow: hidden;
+  }
   font-family: $gotham;
   font-weight: 400;
   color: $black-color;
@@ -2011,6 +2014,8 @@ footer {
   h3 {
     position: relative;
     margin: 0;
+    min-width: 145px;
+    text-align: right;
     font-weight: 900;
     font-size: 30px;
     color: $light-black;
@@ -2549,7 +2554,7 @@ input[type=number] {
     tr {
       th {
         border: 0;
-        font-weight: 400;
+        font-weight: 700;
 
         &:first-child {
           padding-left: 50px;
@@ -2563,7 +2568,7 @@ input[type=number] {
         //padding-top: 1.2rem;
         padding: 1.2rem;
         background-color: $white;
-        font-weight: 700;
+        font-weight: 400;
 
         &:first-child {
           padding-left: 50px;
@@ -2960,7 +2965,7 @@ button:focus {
 
 .vs-img-list {
   img {
-    height: 17px;
+    height: 18px;
   }
 }
 
@@ -3240,6 +3245,7 @@ button:focus {
 
 
 .info-table {
+  width: 100%;
   tr {
     &:first-child {
       td {
@@ -3248,8 +3254,8 @@ button:focus {
         }
       }
     }
-
     td {
+      width: 50% !important;
       font-size: 16px;
       padding: 0.75rem 1rem 1rem 1rem;
       @include media-breakpoint-down(lg) {
@@ -3301,10 +3307,10 @@ button:focus {
 }
 
 .payments-list {
-  margin-top: 40px;
+  margin-top: 25px;
   @include media-breakpoint-down(lg) {
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   li {
@@ -3312,13 +3318,14 @@ button:focus {
       font-weight: 900;
       font-size: 17px;
       text-transform: uppercase;
+      @include media-breakpoint-down(sm){
+        font-size: 14px;
+      }
     }
 
-    &:not(:last-child) {
-      margin-bottom: 30px;
-      @include media-breakpoint-down(lg) {
-        margin-bottom: 20px;
-      }
+    margin-bottom: 10px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 10px;
     }
   }
 }
@@ -3331,7 +3338,7 @@ button:focus {
     tr {
       th {
         border: 0;
-        font-weight: 400;
+        font-weight: 700;
       }
 
       td {
@@ -3340,7 +3347,7 @@ button:focus {
         vertical-align: middle;
         padding: 1.2rem;
         background-color: $white;
-        font-weight: 700;
+        font-weight: 400;
       }
     }
   }
@@ -5101,5 +5108,86 @@ label.label-style2 {
     path {
       fill: #fff;
     }
+  }
+}
+.table-mobile{
+  @media screen and (max-width: 800px) {
+    &.cart-table.order-table table tr:last-child td:not(:last-child){
+      display: none;
+    }
+    &.cart-table.order-table table tr:last-child td:last-child{
+      padding: 0.4rem !important;
+      border-left: 1px solid #707070;
+      .new-price-container{
+        padding: 0;
+      }
+    }
+    &.cart-table table tr:last-child td .new-price-container h4, .cart-table table tr:last-child td .old-price-container h4{
+      font-size: 23px;
+    }
+    table {
+      border: 0;
+    }
+
+    table caption {
+      font-size: 1.3em;
+    }
+
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    table tr {
+      display: block;
+      margin-bottom: .625em;
+      border-bottom: 1px solid #ddd !important;
+    }
+
+    table td {
+      //border-bottom: 1px solid #ddd !important;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+      padding: 0.6rem 0.7rem !important;
+    }
+
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+header{
+  .navbar{
+    //.navbar-collapse{
+    //  position: relative;
+    //  &:before{
+    //    content: '';
+    //    display: block;
+    //    position: fixed;
+    //    z-index: 3;
+    //    top: 0;
+    //    width: 100%;
+    //    height: 100vh;
+    //  }
+    //}
   }
 }
