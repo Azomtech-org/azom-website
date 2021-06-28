@@ -375,6 +375,8 @@ header .header-search a.close-search{
 }
 .card-1 h3 span.vta{
   bottom: -11px !important;
+  left: 0;
+  right: auto;
 }
 @media screen and (max-width: 800px) {
   .table-mobile table td {
