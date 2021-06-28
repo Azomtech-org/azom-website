@@ -211,7 +211,7 @@ a{
 }
 .cart-table table tr th {
     border: 0;
-    font-weight: 400;
+    font-weight: 700;
 }
 .table thead th {
     vertical-align: bottom;
@@ -231,7 +231,7 @@ a{
     vertical-align: middle;
     padding: 1.2rem;
     background-color: #fff;
-    font-weight: 700;
+    font-weight: 400;
 }
 .fw-400 {
     font-weight: 400 !important;
@@ -388,7 +388,17 @@ a{
         font-size: 30px;
     }
 }
-
+.card-2 h3 span {
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0 5px;
+}
+.card-1 h3 span.vta {
+    position: absolute;
+    bottom: -11px;
+    right: 0;
+    font-size: 11px;
+}
 @media (max-width: 576px) {
     .main-title{
         font-size: 25px;
