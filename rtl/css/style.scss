@@ -5182,7 +5182,19 @@ label.label-style2 {
 }
 .header-price-drop{
   .dropdown-menu{
+
     min-width: 5rem;
+    padding: 0;
+    @include media-breakpoint-up(lg){
+      background-color: $white;
+      a{
+        color: $black-color;
+        &:hover{
+          background-color: $black-color;
+          color: $white;
+        }
+      }
+    }
     @include media-breakpoint-down(lg){
       text-align: center;
     }
