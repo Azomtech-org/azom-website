@@ -136,8 +136,9 @@ $letter-spacing: 2px;
 .green-color {
   color: $green-color !important;
 }
+
 //mixin
-@mixin child-delay($start, $end, $delay-time){
+@mixin child-delay($start, $end, $delay-time) {
   $time-offset: $delay-time;
   @for $i from $start through $end {
     &:nth-child(#{$i}) {
@@ -146,6 +147,7 @@ $letter-spacing: 2px;
     }
   }
 }
+
 //extends
 %ellipsis {
   white-space: nowrap;
@@ -565,9 +567,10 @@ $letter-spacing: 2px;
 }
 
 body {
-  &.menu-is-open{
+  &.menu-is-open {
     overflow: hidden;
   }
+
   font-family: $gotham;
   font-weight: 400;
   color: $black-color;
@@ -620,17 +623,20 @@ header {
         flex-grow: 1;
         justify-content: center;
       }
-      li{
+
+      li {
         opacity: 1;
         transition: transform 0.3s, opacity 0.2s 0.1s;
         @include child-delay(1, 9, 0.3);
       }
+
       .header-icon-list {
         a {
           svg {
             width: 20px;
           }
         }
+
         li:last-child .dropdown {
           > a {
             @include media-breakpoint-up(lg) {
@@ -660,7 +666,6 @@ header {
       }
 
 
-
     }
 
   }
@@ -678,7 +683,7 @@ header {
     width: 0;
     height: 100%;
     right: 0;
-    margin:0 auto;
+    margin: 0 auto;
     left: 0;
     top: 0;
     bottom: 0;
@@ -780,6 +785,7 @@ header {
       }
     }
   }
+
   &.search-is-active {
     .header-search {
       transition: all 0.4s 0.4s;
@@ -794,7 +800,8 @@ header {
         opacity: 0 !important;
       }
     }
-    .navbar-brand{
+
+    .navbar-brand {
       transform: scale(0.8);
       opacity: 0 !important;
     }
@@ -3246,6 +3253,7 @@ button:focus {
 
 .info-table {
   width: 100%;
+
   tr {
     &:first-child {
       td {
@@ -3254,6 +3262,7 @@ button:focus {
         }
       }
     }
+
     td {
       width: 50% !important;
       font-size: 16px;
@@ -3319,11 +3328,12 @@ button:focus {
       font-weight: 900;
       font-size: 17px;
       text-transform: uppercase;
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(sm) {
         font-size: 14px;
       }
-      p{
-        @include media-breakpoint-down(md){
+
+      p {
+        @include media-breakpoint-down(md) {
           margin-bottom: 0.5rem;
         }
       }
@@ -3747,6 +3757,18 @@ button:focus {
       background-size: 6px;
     }
   }
+  &.gray-arrow-link{
+    color: #5B5B5B;
+
+    &:hover {
+      color: #707070;
+    }
+
+    &:after {
+      background: url(../images/icon/arrow-right-gray.svg) no-repeat center center;
+      background-size: 6px;
+    }
+  }
 
   &.big-link {
     @include media-breakpoint-up(lg) {
@@ -3783,13 +3805,16 @@ button:focus {
   a {
     border: 0 !important;
     margin-top: 0;
+
     &:hover {
       background-color: transparent;
     }
   }
-  .big-btn{
+
+  .big-btn {
     height: 50px !important;
   }
+
   //.big-btn.black-outline-btn:after{
   //  bottom: -10px;
   //}
@@ -5116,19 +5141,21 @@ label.label-style2 {
     }
   }
 }
-.table-mobile{
+
+.table-mobile {
   @media screen and (max-width: 800px) {
-    &.cart-table.order-table table tr:last-child td:not(:last-child){
+    &.cart-table.order-table table tr:last-child td:not(:last-child) {
       display: none;
     }
-    &.cart-table.order-table table tr:last-child td:last-child{
+    &.cart-table.order-table table tr:last-child td:last-child {
       padding: 0.4rem !important;
       border-left: 1px solid #707070;
-      .new-price-container{
+
+      .new-price-container {
         padding: 0;
       }
     }
-    &.cart-table table tr:last-child td .new-price-container h4, .cart-table table tr:last-child td .old-price-container h4{
+    &.cart-table table tr:last-child td .new-price-container h4, .cart-table table tr:last-child td .old-price-container h4 {
       font-size: 23px;
     }
     table {
@@ -5180,27 +5207,40 @@ label.label-style2 {
     }
   }
 }
-.header-price-drop{
-  .dropdown-menu{
+
+.header-price-drop {
+  .dropdown-menu {
 
     min-width: 5rem;
     padding: 0;
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
       background-color: $white;
-      a{
+      a {
         color: $black-color;
-        &:hover{
+
+        &:hover {
           background-color: $black-color;
           color: $white;
         }
       }
     }
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
       text-align: center;
     }
   }
 }
-#livesearch{
+
+.clep-container2 {
+  .link-arrow.big-link {
+    font-size: 20px;
+    @include media-breakpoint-up(lg) {
+      font-size: 25px;
+    }
+  }
+}
+
+
+#livesearch {
   @media (min-width: 576px) {
     max-width: 540px !important;
   }
@@ -5220,10 +5260,12 @@ label.label-style2 {
   margin: 0 auto !important;
   padding-right: 20px !important;
   padding-left: 20px !important;
-  a{
+
+  a {
     color: #fff !important;
     padding: 10px 19px !important;
-    &:hover{
+
+    &:hover {
       color: #898888 !important;
     }
   }
