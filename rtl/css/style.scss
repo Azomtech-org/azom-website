@@ -173,8 +173,8 @@ $letter-spacing: 2px;
 
   &:hover {
     color: $black-color;
-    background-color: $blue-primary;
-    border-color: $blue-primary;
+    border-color: #868686;
+    background: #2b2b2b;
   }
 }
 
@@ -3311,7 +3311,7 @@ button:focus {
   margin-top: 25px;
   @include media-breakpoint-down(lg) {
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
 
   li {
@@ -3321,6 +3321,11 @@ button:focus {
       text-transform: uppercase;
       @include media-breakpoint-down(sm){
         font-size: 14px;
+      }
+      p{
+        @include media-breakpoint-down(md){
+          margin-bottom: 0.5rem;
+        }
       }
     }
 
@@ -5175,7 +5180,14 @@ label.label-style2 {
     }
   }
 }
-
+.header-price-drop{
+  .dropdown-menu{
+    min-width: 5rem;
+    @include media-breakpoint-down(lg){
+      text-align: center;
+    }
+  }
+}
 #livesearch{
   @media (min-width: 576px) {
     max-width: 540px !important;
