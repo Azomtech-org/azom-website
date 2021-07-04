@@ -829,6 +829,7 @@ header {
 
 .hero-section {
   position: relative;
+  z-index: 20;
   padding-top: 95px;
   background-color: $black-color;
   height: calc(100vh);
@@ -1280,6 +1281,8 @@ footer {
 .hero-big-content {
   padding-top: 20px;
   color: $white;
+  position: relative;
+  z-index: 20;
 
   h2.big-hero-text {
     font-size: 50px;
@@ -1290,6 +1293,9 @@ footer {
     @include media-breakpoint-down(sm) {
       font-size: 25px;
     }
+    @include media-breakpoint-down(xs) {
+      font-size: 22px;
+    }
   }
 
   p {
@@ -1297,6 +1303,10 @@ footer {
     margin: 0 40px;
     @include media-breakpoint-down(sm) {
       font-size: 16px;
+      margin: 0;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 15px;
       margin: 0;
     }
   }
@@ -1333,6 +1343,11 @@ footer {
     @include media-breakpoint-down(md) {
       font-size: 25px;
     }
+    @include media-breakpoint-down(xs) {
+      text-align: center;
+      margin-top: 120px;
+      font-size: 22px;
+    }
   }
 
   p {
@@ -1342,6 +1357,11 @@ footer {
     text-transform: uppercase;
     @include media-breakpoint-down(md) {
       font-size: 20px;
+    }
+    @include media-breakpoint-down(xs) {
+      text-align: center;
+      padding-left: 0;
+      margin-top: 8px;
     }
   }
 }
@@ -1385,6 +1405,9 @@ footer {
     }
     @include media-breakpoint-down(md) {
       transform: translateY(-111%);
+    }
+    @include media-breakpoint-down(xs) {
+      transform: translateY(-104%);
     }
   }
 }
