@@ -75,6 +75,9 @@
     &:not(:last-child) {
       border-bottom: 1px rgba($light-black, 0.5) solid;
     }
+    .copy-btn{
+      margin-top: 10px;
+    }
   }
 }
 
