@@ -1,2 +1,4 @@
 prepros.config
 .idea
+/ltr/.idea
+/rtl/.idea
