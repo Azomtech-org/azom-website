@@ -1,0 +1,94 @@
+.tab-pills-style {
+  .nav-link.active, .nav-pills .show > .nav-link {
+    color: $black-color;
+    background-color: $eee-color;
+
+  }
+  .nav-link.active{
+    &:hover{
+      color: $black-color;
+    }
+  }
+  a.nav-link {
+    border-radius: 0;
+    color: $black-color;
+    text-transform: capitalize;
+
+    &:hover {
+      color: $gray-text-color;
+    }
+    @include media-breakpoint-down(xs){
+      padding: .3rem 0.5rem;
+      font-size: 15px;
+    }
+  }
+}
+
+.badge-secondary {
+  background-color: $eee-color;
+  color: $black-color;
+  border: 1px solid $black-color;
+
+  &.small-badge {
+    padding: 7px;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 0;
+    @include media-breakpoint-down(xs) {
+      padding: 5px;
+    }
+  }
+}
+
+.product-title {
+  .azom {
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+
+  .vat {
+    color: $gray-text-color;
+    @include media-breakpoint-down(xs) {
+      font-size: 13px
+    }
+  }
+}
+.store-products-container{
+  .store-card{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include media-breakpoint-up(lg){
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    @include media-breakpoint-down(lg){
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    &:not(:last-child){
+      border-bottom:1px rgba($light-black, 0.5) solid;
+    }
+  }
+}
+.color-card{
+  h4{
+    font-size: 27px;
+    font-weight: 400;
+    @include media-breakpoint-down(md){
+      font-size: 25px;
+    }
+    @include media-breakpoint-down(xs){
+      font-size: 22px;
+    }
+  }
+  p{
+    color: $gray-text-color;
+  }
+}
+.products-item-list{
+  p{
+    margin: 0;
+  }
+}
