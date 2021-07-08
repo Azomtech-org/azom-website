@@ -1,0 +1,292 @@
+.cart-table {
+  table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+
+    tr {
+      &:first-child{
+        td{
+          border-top: 1px rgba($light-black, 0.5) solid;
+          @media screen and (max-width: 800px) {
+            border: 0;
+          }
+        }
+      }
+      td {
+        border: 0;
+        border-bottom: 1px rgba($light-black, 0.5) solid;
+        @media screen and (max-width: 800px) {
+          border: 0;
+        }
+        white-space: nowrap;
+        vertical-align: middle;
+        //padding-top: 1.2rem;
+        padding: 1.2rem;
+        background-color: $white;
+        font-weight: 400;
+        .products-name-img-table{
+          img{
+            height: 70px;
+            width: auto;
+            margin-right: 10px;
+          }
+          span{
+            @extend %big-p;
+          }
+        }
+      }
+
+      //&:last-child {
+      //  td {
+      //    padding: 0;
+      //
+      //    &:first-child {
+      //      input {
+      //        padding: 1.2rem;
+      //        padding-left: 50px;
+      //        width: 100%;
+      //        font-size: 20px;
+      //        border: 0;
+      //        background-color: transparent;
+      //        outline: none;
+      //      }
+      //
+      //      background-color: $eee-color;
+      //    }
+      //
+      //    .old-price-container, .new-price-container {
+      //      padding-left: 1.2rem;
+      //      padding-right: 1.2rem;
+      //
+      //      p {
+      //        margin: 0;
+      //        font-weight: 400;
+      //        font-size: 13px;
+      //        position: relative;
+      //        top: 5px;
+      //      }
+      //
+      //      h4 {
+      //        margin: 0;
+      //        font-weight: 900;
+      //        font-size: 33px;
+      //
+      //        span {
+      //          font-size: 18px;
+      //          font-weight: 400;
+      //        }
+      //      }
+      //    }
+      //
+      //    button.lg-btn {
+      //      margin: 0;
+      //      font-size: 25px;
+      //      padding-top: 40px;
+      //      padding-bottom: 40px;
+      //      width: 100%;
+      //    }
+      //
+      //    .old-price-container {
+      //      h4 {
+      //        color: rgba($black-color, 0.5);
+      //        text-decoration: line-through;
+      //        text-decoration-color: #838383;
+      //      }
+      //    }
+      //
+      //    &:last-child {
+      //      border: 1px solid $border-color;
+      //      border-left: 0;
+      //    }
+      //
+      //    &:nth-child(3) {
+      //      border: 1px solid $border-color;
+      //      border-left: 0;
+      //      border-right: 0;
+      //    }
+      //  }
+      //}
+    }
+  }
+  &.table-mobile.pay-table{
+    table td{
+      @media screen and (max-width: 800px){
+        text-align: initial;
+      }
+    }
+  }
+  &.order-table {
+    table {
+      tr {
+        &:last-child {
+          td {
+            padding: 0;
+
+            .old-price-container, .new-price-container {
+              padding-left: 1.2rem;
+              padding-right: 1.2rem;
+
+              p {
+                margin: 0;
+                font-weight: 400;
+                font-size: 13px;
+                position: relative;
+                top: 5px;
+              }
+
+              h4 {
+                margin: 0;
+                font-weight: 700;
+                font-size: 33px;
+
+                span {
+                  font-size: 18px;
+                  font-weight: 400;
+                }
+              }
+            }
+
+
+            &:last-child {
+              border: 1px solid $border-color;
+              border-left: 0;
+            }
+          }
+
+          td {
+            background-color: transparent;
+            border-top: 1px solid $border-color;
+            border-bottom: 1px solid $border-color;
+
+            .new-price-container {
+              color: $light-black;
+              padding-top: 5px;
+              padding-bottom: 5px;
+            }
+
+            &:first-child {
+              border-left: 1px solid $border-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.info-table {
+  width: 100%;
+
+  tr {
+    &:first-child {
+      td {
+        @include media-breakpoint-up(lg) {
+          padding-top: 0;
+        }
+      }
+    }
+
+    td {
+      width: 50% !important;
+      font-size: 16px;
+      padding: 0.75rem 1rem 1rem 1rem;
+      @include media-breakpoint-down(lg) {
+        padding: 0.5rem 0.5rem 0.5rem 0;
+      }
+
+      &:first-child {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.my-orders-table {
+  table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+
+    tr {
+      th {
+        border: 0;
+        font-weight: 700;
+      }
+
+      td {
+        border: 0;
+        white-space: nowrap;
+        vertical-align: middle;
+        padding: 1.2rem;
+        background-color: #f5f5f5;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.table-mobile {
+  @media screen and (max-width: 800px) {
+    &.cart-table.order-table table tr:last-child td:not(:last-child) {
+      display: none;
+    }
+    &.cart-table.order-table table tr:last-child td:last-child {
+      padding: 0.4rem !important;
+      border-left: 1px solid #707070;
+
+      .new-price-container {
+        padding: 0;
+      }
+    }
+    &.cart-table table tr:last-child td .new-price-container h4, .cart-table table tr:last-child td .old-price-container h4 {
+      font-size: 23px;
+    }
+    table {
+      border: 0;
+    }
+
+    table caption {
+      font-size: 1.3em;
+    }
+
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    table tr {
+      display: block;
+      margin-bottom: .625em;
+      border-bottom: 1px solid #ddd !important;
+    }
+
+    table td {
+      //border-bottom: 1px solid #ddd !important;
+      display: block;
+      font-size: 1em;
+      text-align: right;
+      padding: 0.85rem 0.7rem !important;
+    }
+
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+

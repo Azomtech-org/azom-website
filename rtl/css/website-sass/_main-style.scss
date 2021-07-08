@@ -8,7 +8,7 @@ $gray-bg: #EEE;
 $gray-text-color: #898888;
 $eee-color: #EEEEEE;
 $red-color: #EB402E;
-$f5-color: #f5f5f5;
+$f5-color: #fff;
 $border-color: #707070;
 $light-black: #5B5B5B;
 $green-color: #599744;
@@ -865,7 +865,11 @@ header {
     height: 100%;
   }
 }
-
+.w-100-lg {
+  @include media-breakpoint-up(lg) {
+    width: 100%;
+  }
+}
 .home-hero-content {
   color: $white;
 
@@ -2072,7 +2076,7 @@ footer {
 }
 
 .card-2 {
-  background-color: $white;
+  background-color: #f5f5f5;
 
   p {
     margin: 0;
@@ -2122,7 +2126,7 @@ footer {
   h2 {
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 50px;
     letter-spacing: $letter-spacing;
     @include media-breakpoint-down(md) {
       font-size: 35px;
@@ -2144,10 +2148,10 @@ footer {
   }
 
   p {
-    font-size: 20px;
+    font-size: 18px;
     color: $light-black;
     @include media-breakpoint-down(md) {
-      font-size: 18px;
+      font-size: 17px;
     }
   }
 }
@@ -2565,158 +2569,6 @@ input[type=number] {
     }
   }
 }
-
-.cart-table {
-  table {
-    border-collapse: separate;
-    border-spacing: 0 15px;
-
-    tr {
-      th {
-        border: 0;
-        font-weight: 700;
-
-        &:first-child {
-          padding-left: 50px;
-        }
-      }
-
-      td {
-        border: 0;
-        white-space: nowrap;
-        vertical-align: middle;
-        //padding-top: 1.2rem;
-        padding: 1.2rem;
-        background-color: $white;
-        font-weight: 400;
-
-        &:first-child {
-          padding-left: 50px;
-          position: relative;
-
-          button {
-            position: absolute;
-            left: 17px;
-            top: 50%;
-            transform: translateY(-56%);
-            border: 0;
-            background-color: transparent;
-            outline: none !important;
-            cursor: pointer;
-
-            svg {
-              transition: all ease-in-out 0.3s;
-              width: 12px;
-              height: auto;
-            }
-
-            &:hover {
-              svg {
-                fill: $red-color;
-              }
-            }
-          }
-        }
-      }
-
-      &:last-child {
-        td {
-          padding: 0;
-
-          &:first-child {
-            input {
-              padding: 1.2rem;
-              padding-left: 50px;
-              width: 100%;
-              font-size: 20px;
-              border: 0;
-              background-color: transparent;
-              outline: none;
-            }
-
-            background-color: $eee-color;
-          }
-
-          .old-price-container, .new-price-container {
-            padding-left: 1.2rem;
-            padding-right: 1.2rem;
-
-            p {
-              margin: 0;
-              font-weight: 400;
-              font-size: 13px;
-              position: relative;
-              top: 5px;
-            }
-
-            h4 {
-              margin: 0;
-              font-weight: 900;
-              font-size: 33px;
-
-              span {
-                font-size: 18px;
-                font-weight: 400;
-              }
-            }
-          }
-
-          button.lg-btn {
-            margin: 0;
-            font-size: 25px;
-            padding-top: 40px;
-            padding-bottom: 40px;
-            width: 100%;
-          }
-
-          .old-price-container {
-            h4 {
-              color: rgba($black-color, 0.5);
-              text-decoration: line-through;
-              text-decoration-color: #838383;
-            }
-          }
-
-          &:last-child {
-            border: 1px solid $border-color;
-            border-left: 0;
-          }
-
-          &:nth-child(3) {
-            border: 1px solid $border-color;
-            border-left: 0;
-            border-right: 0;
-          }
-        }
-      }
-    }
-  }
-
-  &.order-table {
-    table {
-      tr {
-        &:last-child {
-          td {
-            background-color: transparent;
-            border-top: 1px solid $border-color;
-            border-bottom: 1px solid $border-color;
-
-            .new-price-container {
-              color: $light-black;
-              padding-top: 5px;
-              padding-bottom: 5px;
-            }
-
-            &:first-child {
-              border-left: 1px solid $border-color;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 
 .edit-price-container {
   &.input-group {
@@ -3263,34 +3115,6 @@ button:focus {
   }
 }
 
-
-.info-table {
-  width: 100%;
-
-  tr {
-    &:first-child {
-      td {
-        @include media-breakpoint-up(lg) {
-          padding-top: 0;
-        }
-      }
-    }
-
-    td {
-      width: 50% !important;
-      font-size: 16px;
-      padding: 0.75rem 1rem 1rem 1rem;
-      @include media-breakpoint-down(lg) {
-        padding: 0.5rem 0.5rem 0.5rem 0;
-      }
-
-      &:first-child {
-        font-weight: 700;
-      }
-    }
-  }
-}
-
 .bill-card {
   padding: 0 50px;
   @include media-breakpoint-down(md) {
@@ -3358,30 +3182,6 @@ button:focus {
     }
   }
 }
-
-.my-orders-table {
-  table {
-    border-collapse: separate;
-    border-spacing: 0 15px;
-
-    tr {
-      th {
-        border: 0;
-        font-weight: 700;
-      }
-
-      td {
-        border: 0;
-        white-space: nowrap;
-        vertical-align: middle;
-        padding: 1.2rem;
-        background-color: $white;
-        font-weight: 400;
-      }
-    }
-  }
-}
-
 .camera-card {
   padding: 40px 0;
   @include media-breakpoint-down(lg) {
@@ -5155,71 +4955,6 @@ label.label-style2 {
   }
 }
 
-.table-mobile {
-  @media screen and (max-width: 800px) {
-    &.cart-table.order-table table tr:last-child td:not(:last-child) {
-      display: none;
-    }
-    &.cart-table.order-table table tr:last-child td:last-child {
-      padding: 0.4rem !important;
-      border-left: 1px solid #707070;
-
-      .new-price-container {
-        padding: 0;
-      }
-    }
-    &.cart-table table tr:last-child td .new-price-container h4, .cart-table table tr:last-child td .old-price-container h4 {
-      font-size: 23px;
-    }
-    table {
-      border: 0;
-    }
-
-    table caption {
-      font-size: 1.3em;
-    }
-
-    table thead {
-      border: none;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
-
-    table tr {
-      display: block;
-      margin-bottom: .625em;
-      border-bottom: 1px solid #ddd !important;
-    }
-
-    table td {
-      //border-bottom: 1px solid #ddd !important;
-      display: block;
-      font-size: .8em;
-      text-align: right;
-      padding: 0.85rem 0.7rem !important;
-    }
-
-    table td::before {
-      /*
-      * aria-label has no advantage, it won't be read inside a table
-      content: attr(aria-label);
-      */
-      content: attr(data-label);
-      float: left;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-
-    table td:last-child {
-      border-bottom: 0;
-    }
-  }
-}
 
 .header-price-drop {
   .dropdown-menu {
@@ -5252,7 +4987,10 @@ label.label-style2 {
   }
 }
 
-
+.vat{
+  font-size: 14px;
+  color: $light-black;
+}
 #livesearch {
   @media (min-width: 576px) {
     max-width: 540px !important;
