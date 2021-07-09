@@ -169,31 +169,89 @@
                     <div class="input-container">
                         <div class="row align-items-center">
                             <div class="col-lg-3">
-                                <label for="mobile">
+                                <label class="mobile-tab" for="mobile">
                                     Your Mobile
                                 </label>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="input-group ltr-dir">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">+966</span>
-                                    </div>
-                                    <input type="number" id="mobile" class="form-control" placeholder="501234567" required
-                                           maxlength="9" minlength="9" data-parsley-length-message="Wrong mobile number"
-                                           data-parsley-required-message="Enter your mobile number">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-3">
-                                <label for="email">
+                                <label class="mail-tab" style="display: none" for="email">
                                     Your Email
                                 </label>
                             </div>
                             <div class="col-lg-6">
-                                <input id="email" type="email" placeholder="Ahmedali@gmail.com">
+                                <div class="row">
+                                    <div class="col mobile-tab">
+                                        <div class="input-group ltr-dir">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">+966</span>
+                                            </div>
+                                            <input type="number" id="mobile" class="form-control"
+                                                   placeholder="501234567" required
+                                                   maxlength="9" minlength="9"
+                                                   data-parsley-length-message="Wrong mobile number"
+                                                   data-parsley-required-message="Enter your mobile number">
+                                        </div>
+                                    </div>
+                                    <div style="display: none" class="col mail-tab">
+                                        <input id="email" type="email" placeholder="Ahmedali@gmail.com">
+                                    </div>
+                                    <div class="col-auto pl-0">
+                                        <div class="d-flex flex-nowrap">
+                                            <button type="button" class="show-mobil tab-btn active">
+                                                <?xml version="1.0" encoding="iso-8859-1"?>
+                                                <svg version="1.1" id="Capa_1" width="80px" xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                     viewBox="0 0 512 512"
+                                                     xml:space="preserve">
+                                                <g>
+                                                    <g>
+                                                        <path d="M366,0H146c-20.678,0-37.5,16.822-37.5,37.5v437c0,20.678,16.822,37.5,37.5,37.5h220c20.678,0,37.5-16.822,37.5-37.5v-437
+                                                            C403.5,16.822,386.678,0,366,0z M388.5,407H176c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.358,7.5,7.5,7.5h212.5v52.5
+                                                            c0,12.407-10.093,22.5-22.5,22.5H146c-12.407,0-22.5-10.093-22.5-22.5V422H146c4.142,0,7.5-3.358,7.5-7.5
+                                                            c0-4.142-3.358-7.5-7.5-7.5h-22.5V75h265V407z M388.5,60h-265V37.5c0-12.407,10.093-22.5,22.5-22.5h220
+                                                            c12.407,0,22.5,10.093,22.5,22.5V60z"/>
+                                                    </g>
+                                                </g>
+                                                    <g>
+                                                    <g>
+                                                        <path d="M286,30h-30c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.358,7.5,7.5,7.5h30c4.142,0,7.5-3.358,7.5-7.5
+                                                            C293.5,33.358,290.142,30,286,30z"/>
+                                                    </g>
+                                                </g>
+                                                    <g>
+                                                    <g>
+                                                        <path d="M256,437c-12.407,0-22.5,10.093-22.5,22.5c0,12.407,10.093,22.5,22.5,22.5s22.5-10.093,22.5-22.5
+                                                            C278.5,447.093,268.407,437,256,437z M256,467c-4.136,0-7.5-3.364-7.5-7.5s3.364-7.5,7.5-7.5s7.5,3.364,7.5,7.5
+                                                            S260.136,467,256,467z"/>
+                                                    </g>
+                                                </g>
+                                                    <g>
+                                                <g>
+                                                    <circle cx="226" cy="37.5" r="7.5"/>
+                                                </g>
+                                            </g>
+                                            </svg>
+
+                                            </button>
+                                            <button type="button" class="show-mail tab-btn">
+                                                <?xml version="1.0" encoding="iso-8859-1"?>
+                                                <svg version="1.1" id="Capa_1" width="80px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                     viewBox="0 0 512 512" xml:space="preserve">
+                                                        <g>
+                                                            <g>
+                                                                <path d="M485.743,85.333H26.257C11.815,85.333,0,97.148,0,111.589V400.41c0,14.44,11.815,26.257,26.257,26.257h459.487
+                                                                    c14.44,0,26.257-11.815,26.257-26.257V111.589C512,97.148,500.185,85.333,485.743,85.333z M475.89,105.024L271.104,258.626
+                                                                    c-3.682,2.802-9.334,4.555-15.105,4.529c-5.77,0.026-11.421-1.727-15.104-4.529L36.109,105.024H475.89z M366.5,268.761
+                                                                    l111.59,137.847c0.112,0.138,0.249,0.243,0.368,0.368H33.542c0.118-0.131,0.256-0.23,0.368-0.368L145.5,268.761
+                                                                    c3.419-4.227,2.771-10.424-1.464-13.851c-4.227-3.419-10.424-2.771-13.844,1.457l-110.5,136.501V117.332l209.394,157.046
+                                                                    c7.871,5.862,17.447,8.442,26.912,8.468c9.452-0.02,19.036-2.6,26.912-8.468l209.394-157.046v275.534L381.807,256.367
+                                                                    c-3.42-4.227-9.623-4.877-13.844-1.457C363.729,258.329,363.079,264.534,366.5,268.761z"/>
+                                                            </g>
+                                                        </g>
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -210,7 +268,8 @@
                                     <label for="show_pass" class="show-pass-label">
                                         <img src="images/icon/eye.svg" alt="show">
                                     </label>
-                                    <input id="password" type="password" class="password" placeholder="●●●●●●●●" data-parsley-required=""
+                                    <input id="password" type="password" class="password" placeholder="●●●●●●●●"
+                                           data-parsley-required=""
                                            data-parsley-required-message="Enter Password">
                                 </div>
                             </div>

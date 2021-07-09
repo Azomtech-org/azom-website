@@ -372,7 +372,35 @@ $letter-spacing: 2px;
     }
   }
 }
-
+.tab-btn{
+  @extend %my-btn;
+  margin: 0;
+  border: 0;
+  padding: 10px 12px;
+  svg{
+    max-height: 27px;
+    max-width: 30px;
+    path{
+      fill: $black-color;
+      transition: all ease-in-out 0.3s;
+    }
+  }
+  &:hover{
+    background-color: transparent;
+    border: 0;
+    svg{
+      path{
+        fill: $light-black;
+      }
+    }
+  }
+  &.active{
+    background-color: $eee-color;
+    &:hover{
+      background-color: $eee-color;
+    }
+  }
+}
 //class
 .gray-text-color {
   color: $gray-text-color;
@@ -4815,15 +4843,15 @@ button {
 .copy-btn {
   outline: none;
   cursor: pointer;
-  color: #5B5B5B;
-  font-weight: 500;
+  color: $black-color;
+  //font-weight: 500;
 
   &:focus {
     outline: none;
   }
 
   &:hover {
-    color: $black-color;
+    color: $gray-text-color;
   }
 
   svg {

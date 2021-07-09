@@ -661,4 +661,22 @@ $(document).ready(function () {
       resendCode();
     })
   }
+  if($(".show-mobil").length){
+    var fadeTime = 200
+    $(".show-mobil").on("click", function (){
+      $(this).addClass("active");
+      $(".show-mail").removeClass("active");
+      $(".mail-tab").fadeOut(fadeTime,function (){
+        $(".mobile-tab").fadeIn(fadeTime)
+      })
+    })
+    $(".show-mail").on("click", function (){
+      $(this).addClass("active");
+      $(".show-mobil").removeClass("active")
+      $(".mobile-tab").fadeOut(fadeTime,function (){
+        $(".mail-tab").fadeIn(fadeTime)
+      })
+
+    })
+  }
 });
