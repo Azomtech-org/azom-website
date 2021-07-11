@@ -375,8 +375,8 @@ $letter-spacing: 2px;
 .tab-btn{
   @extend %my-btn;
   margin: 0;
-  border: 0;
   padding: 10px 12px;
+  border: 2px solid #eee;
   svg{
     max-height: 27px;
     max-width: 30px;
@@ -387,7 +387,7 @@ $letter-spacing: 2px;
   }
   &:hover{
     background-color: transparent;
-    border: 0;
+    border: 2px solid #eee;
     svg{
       path{
         fill: $light-black;
@@ -398,6 +398,100 @@ $letter-spacing: 2px;
     background-color: $eee-color;
     &:hover{
       background-color: $eee-color;
+    }
+  }
+}
+.button--social-login {
+  text-align: center;
+  margin-bottom: 12px;
+  width: 100%;
+  color: white;
+  height: 50px;
+  line-height: 46px;
+  position: relative;
+  display: block;
+  padding: 0 18px 0 6px;
+  border: 0 none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 250ms linear;
+  &:hover{
+    color: $white;
+  }
+}
+.button--facebook {
+  background-color: #4b70ab;
+  border: 1px solid #3b5988;
+  &:hover{
+    background-color: #436499;
+  }
+}
+.button--googleplus {
+  background-color: #DD4B39;
+  border: 1px solid #c23321;
+  &:hover{
+    background-color: #d73925;
+  }
+}
+.button--twitter {
+  background-color: #3B94D9;
+  border: 1px solid #257abc;
+  &:hover{
+    background-color: #2988d2;
+  }
+}
+.button--social-login .icon {
+  margin-right: 1px;
+  font-size: 24px;
+  line-height: 24px;
+  width: 31px;
+  height: 24px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  svg{
+    max-height: 100%;
+    max-width: 25px;
+    fill: $white;
+  }
+}
+.or{
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media-breakpoint-down(lg){
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  span{
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &:before{
+    content: "";
+    width: 1px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: $eee-color;
+    @include media-breakpoint-down(lg){
+      height: 1px;
+      width: 100%;
+      top: 50%;
+      left: 0;
     }
   }
 }
