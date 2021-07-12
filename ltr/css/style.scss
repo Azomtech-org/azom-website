@@ -7,6 +7,9 @@
 @import "scss/_functions.scss";
 @import "scss/_variables.scss";
 @import "scss/mixins/_breakpoints.scss";
+@import "website-sass/var-fonts";
+@import "website-sass/mixin";
+@import "website-sass/header";
 @import "website-sass/main-style";
 @import "website-sass/store";
 @import "website-sass/table";

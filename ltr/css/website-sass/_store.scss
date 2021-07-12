@@ -33,13 +33,14 @@
   border: 1px solid $black-color;
 
   &.small-badge {
-    padding: 7px;
+    padding: 7px 10px;
     font-weight: 500;
     font-size: 16px;
-    border-radius: 0;
+    border-radius: 6px;
     @include media-breakpoint-down(xs) {
       padding: 5px;
       font-size: 14px;
+      border-radius: 6px;
     }
   }
 }
@@ -184,7 +185,16 @@
       max-width: 55%;
     }
   }
-
+.free-item{
+  text-align: center;
+  margin-top: 10px;
+  p{
+    margin-bottom: 5px;
+  }
+  img {
+    max-width: 80%;
+  }
+}
   .edit-price-container {
     justify-content: center;
     margin-top: 35px;
@@ -222,6 +232,7 @@
 .icon-btn {
   svg {
     margin-left: 5px;
+    height: 0.8em;
 
     path {
       transition: all ease-in-out 0.3s;

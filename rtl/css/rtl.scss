@@ -2,7 +2,7 @@
 @import "scss/_variables.scss";
 @import "scss/mixins/_breakpoints.scss";
 
-body {
+html{
   direction: rtl;
 }
 
@@ -394,4 +394,28 @@ header .header-search a.close-search{
   .table-mobile.cart-table.order-table table tr:last-child td:last-child{
     border-right: 1px solid #707070;
   }
+}
+.button--social-login .icon{
+  margin-right: 0;
+  margin-left: 1px;
+}
+.form .input-button-group input {
+  padding-left: 110px;
+  padding-right: 12px;
+}
+.form .input-button-group button{
+  left: 7px;
+  right: auto;
+}
+.icon-btn svg{
+  transform: scaleX(-1);
+  margin-right: 5px;
+  margin-left: auto;
+}
+.cart-table table tr td.del-row{
+  text-align: left !important;
+}
+.navbar .dropdown-toggle:after{
+  margin-right: .1em;
+  margin-left: 0;
 }

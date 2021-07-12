@@ -1,0 +1,192 @@
+//mixin
+@mixin child-delay($start, $end, $delay-time) {
+  $time-offset: $delay-time;
+  @for $i from $start through $end {
+    &:nth-child(#{$i}) {
+      $time-offset: $time-offset + 0.05;
+      transition-delay: #{$time-offset}s;
+    }
+  }
+}
+
+//extends
+%ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%r-title {
+  font-size: 27px;
+  font-weight: 400;
+  @include media-breakpoint-down(md) {
+    font-size: 25px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 22px;
+  }
+}
+
+%big-p {
+  font-size: 20px;
+  font-weight: 400;
+  @include media-breakpoint-down(md) {
+    font-size: 18px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 16px;
+  }
+}
+
+%my-btn {
+  border-radius: 8px;
+  font-family: gotham, "sans-serif";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: $white;
+  color: $black-color;
+  border: 1px solid $white;
+  position: relative;
+  margin-top: 15px;
+  transition: all ease-in-out 0.3s;
+  font-size: 20px;
+  height: 52px;
+  @include media-breakpoint-down(md) {
+    height: 45px;
+  }
+
+  &:hover {
+    color: $black-color;
+    border-color: #868686;
+    background: #2b2b2b;
+  }
+}
+
+%purple-btn {
+  @extend %my-btn;
+  background-color: $purple-color;
+  color: $white;
+}
+
+%green-btn {
+  @extend %my-btn;
+  background-color: $green-color;
+  color: $white !important;
+
+  &:hover {
+    background-color: darken($green-color, 5%);
+    color: $white !important;
+    border-color: $green-color;
+  }
+}
+
+%blue-btn {
+  @extend %my-btn;
+  background-color: $blue-primary;
+  color: $white;
+}
+
+%my-outluine-btn {
+  @extend %my-btn;
+  padding: 0;
+  background-color: transparent;
+  color: $white;
+
+  &:before, &:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.3s linear;
+    background: $yellow-color;
+    transition-delay: 0s;
+  }
+
+  &:before {
+    right: -1px;
+    top: -1px;
+  }
+
+  &:after {
+    left: -1px;
+    bottom: -1px;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    width: 100%;
+    height: 100%;
+    @include media-breakpoint-down(md) {
+      font-size: 15px;
+      padding: 6px 10px;
+    }
+
+    &:before, &:after {
+      content: "";
+      width: 2px;
+      height: 0;
+      position: absolute;
+      transition: all 0.3s linear;
+      background: $yellow-color;
+      transition-delay: 0.3s;
+    }
+
+    &:before {
+      left: -1px;
+      top: -1px;
+    }
+
+    &:after {
+      right: -1px;
+      bottom: -1px;
+    }
+
+    &:hover {
+      &:before, &:after {
+        height: 100%;
+        transition-delay: 0s;
+      }
+    }
+  }
+
+  &:hover {
+    &:before, &:after {
+      width: 100%;
+      transition-delay: 0.3s;
+    }
+
+    color: $yellow-color;
+    background-color: transparent;
+    border-color: $white;
+  }
+}
+
+%black-outline-btn {
+  @extend %my-outluine-btn;
+  color: $black-color;
+  border-color: $black-color;
+
+  &:hover {
+    border-color: $black-color;
+    color: $blue-color;
+  }
+
+  &:before, &:after {
+    background-color: $blue-color;
+  }
+
+  span {
+    &:before, &:after {
+      background-color: $blue-color;
+    }
+  }
+}
+
+.big-p{
+  @extend %big-p;
+}
